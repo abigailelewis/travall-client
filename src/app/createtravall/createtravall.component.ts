@@ -29,8 +29,6 @@ export class CreatetravallComponent implements OnInit {
     this.travallService.createTravall(this.createTravallForm.value)
     .subscribe(createdTravall => {
       console.log('submitted:', createdTravall);
-      
-      alert('hello');
     })
   }
 
