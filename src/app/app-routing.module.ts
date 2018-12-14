@@ -19,9 +19,9 @@ import { AuthGuard } from './help/auth.guard';
 const appRoutes: Routes = [
     { path: '', redirectTo: '/about', pathMatch: 'full' },
     // { path: '', component: AboutComponent,  data: {title: 'About'}, canActivate: [AuthGuard] },
-    { path: 'about', component: AboutComponent, data: {title: 'About'}},
-    { path: 'login', component: LoginComponent,  data: {title: 'Login'} },
-    { path: 'signup', component: SignupComponent , data: {title: 'Siginup'} },
+    { path: 'about', component: AboutComponent, data: {title: 'About Travall'}},
+    { path: 'login', component: LoginComponent,  data: {title: 'Travall Login'} },
+    { path: 'signup', component: SignupComponent , data: {title: 'Travall Signup'} },
 
     // otherwise redirect to about
     // { path: '**', redirectTo: '' }
