@@ -14,7 +14,7 @@ export class CreatetravallComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private travallService: TravallService) { }
 
   ngOnInit() {
-    this.user = localStorage.getItem('currentUser');
+    this.user = JSON.parse(localStorage.getItem('currentUser'));
     this.createTravallForm = this.formBuilder.group({
       title: new FormControl(),
       location: new FormControl(),
@@ -26,10 +26,10 @@ export class CreatetravallComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.createTravallForm.value);
     this.travallService.createTravall(this.createTravallForm.value)
     .subscribe(createdTravall => {
       console.log('submitted:', createdTravall);
+      
       alert('hello');
     })
   }

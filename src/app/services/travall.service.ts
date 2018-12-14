@@ -6,6 +6,7 @@ import { Travall } from '../models/travall';
 import { Observable } from 'rxjs';
 
 const apiUrl = 'https://travall-server.herokuapp.com/travall'
+// const apiUrl = 'http://localhost:3000/travall'
 @Injectable({
   providedIn: 'root'
 })
@@ -17,6 +18,6 @@ export class TravallService {
   }
 
   createTravall(travall: any) : any {
-    return this.http.post<Travall[]>(apiUrl + `/create`, travall)
+    return this.http.post(apiUrl + `/create`, travall);
   }
 }
