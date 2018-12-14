@@ -1,9 +1,27 @@
-<nav class="navbar navbar-expand navbar-dark bg-dark" >
-  <div class="navbar-nav">
-      <a class="nav-item nav-link" routerLink="/about">About</a>
-      <a class="nav-item nav-link" routerLink="/login">Login/Register</a>
-      <a class="nav-item nav-link" (click)="logout()" *ngIf='user' >Logout </a>
-  </div>
-</nav>
+
+<mat-toolbar color="primary">
+  <button mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <span>Travall</span>
+  <span class="fill-remaining"></span>
+
+  <button mat-fab color="accent">About</button>
+  <button mat-fab color="accent">Travall</button>
+  <button mat-fab color="accent">MyTrav</button>
+</mat-toolbar>
+
+
+
+
+
+ <!-- <nav class="navbar navbar-expand navbar-dark bg-dark" >
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/about">About</a>
+        <a class="nav-item nav-link" routerLink="/login">Login/Register</a>
+        <a class="nav-item nav-link" (click)="logout()" *ngIf='user' >Logout </a>
+    </div>
+  </nav> -->
 
 <!-- *ngIf = "currentUser" -->
