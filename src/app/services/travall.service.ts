@@ -13,10 +13,10 @@ export class TravallService {
   constructor(private http: HttpClient) { }
 
   getTravalls(user: User) {
-    return this.http.get(`/getall/` + user.id)
+    return this.http.get(apiUrl + `/getall/` + user.id)
   }
 
   createTravall(travall: any) : any {
-    return this.http.post<Travall[]>(`/create`, travall)
+    return this.http.post<Travall[]>(apiUrl + `/create`, travall)
   }
 }
