@@ -14,7 +14,7 @@ import { TransportationComponent } from './transportation/transportation.compone
 import { ActivityComponent } from './activity/activity.component';
 import { HeaderComponent } from './header/header.component';
 import { TravallComponent } from './travall/travall.component';
-// import { CreateComponent } from './create/create.component';
+import { CreateComponent } from './create/create.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { AuthComponent } from './auth/auth.component';
@@ -39,6 +39,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { MatMenuModule} from '@angular/material/menu';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { AgmCoreModule } from '@agm/core';
+import { CreatetravallComponent } from './createtravall/createtravall.component';
 
 @NgModule({
   declarations: [
@@ -49,13 +50,15 @@ import { AgmCoreModule } from '@agm/core';
     ActivityComponent,
     HeaderComponent,
     TravallComponent,
-    // CreateComponent,
+    CreateComponent,
     SignupComponent,
     LoginComponent,
     AuthComponent,
     AboutComponent,
     AlertComponent,
-    
+    CreatetravallComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -82,13 +85,13 @@ import { AgmCoreModule } from '@agm/core';
       apiKey: 'AIzaSyCWNzQvhDrg2EITW_mt9q7FxBoTfGmkEFs'
     })
     // RouterModule.forRoot([
-    //   { 
+    //   {
     //     path: '',
     //     component: AboutComponent,
-    //     canActivate: [AuthGuard],	
+    //     canActivate: [AuthGuard],
     //   }
     //   ])
-    
+
   ],
   providers: [,
         AuthGuard,
@@ -97,7 +100,7 @@ import { AgmCoreModule } from '@agm/core';
         UserService,
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-      
+
   ],
   bootstrap: [AppComponent]
 })
