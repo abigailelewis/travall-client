@@ -39,6 +39,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { MatMenuModule} from '@angular/material/menu';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { AgmCoreModule } from '@agm/core';
+import { CreatetravallComponent } from './createtravall/createtravall.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { AgmCoreModule } from '@agm/core';
     AuthComponent,
     AboutComponent,
     AlertComponent,
+    CreatetravallComponent,
     
   ],
   imports: [
