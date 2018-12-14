@@ -13,7 +13,6 @@ export class CreateComponent implements OnInit {
 
   public addrKeys: string[];
   public addr: object;
-  
 
   location: Object;
 
