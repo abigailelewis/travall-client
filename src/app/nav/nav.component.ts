@@ -29,30 +29,3 @@ export class NavComponent implements OnInit {
 }
 
 
-// import { Component, OnInit } from '@angular/core';
-// import { Subscription } from 'rxjs';
-// import { ActivatedRoute, Router } from '@angular/router';
-// import { User } from '../models/user';
-// import { UserService } from '../services/user.service';
-// import { AuthService } from '../services/auth.service';
-
-// @Component({
-//   selector: 'app-nav',
-//   templateUrl: './nav.component.html',
-//   styleUrls: ['./nav.component.css']
-// })
-// export class NavComponent implements OnInit {
-//   currentUser: User;
-//     currentUserSubscription: Subscription;
-
-//   constructor(private userService: UserService, private authService: AuthService,) {
-//     this.currentUserSubscription = this.authService.currentUser.subscribe(user => {
-//         this.currentUser = user;
-//     });
-// }
-
-
-//   ngOnInit() {
-//   }
-
-// }
