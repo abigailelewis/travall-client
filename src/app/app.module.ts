@@ -57,7 +57,8 @@ import { CreatetravallComponent } from './createtravall/createtravall.component'
     AboutComponent,
     AlertComponent,
     CreatetravallComponent,
-    
+
+
   ],
   imports: [
     BrowserModule,
@@ -84,13 +85,13 @@ import { CreatetravallComponent } from './createtravall/createtravall.component'
       apiKey: 'AIzaSyCWNzQvhDrg2EITW_mt9q7FxBoTfGmkEFs'
     })
     // RouterModule.forRoot([
-    //   { 
+    //   {
     //     path: '',
     //     component: AboutComponent,
-    //     canActivate: [AuthGuard],	
+    //     canActivate: [AuthGuard],
     //   }
     //   ])
-    
+
   ],
   providers: [,
         AuthGuard,
@@ -99,7 +100,7 @@ import { CreatetravallComponent } from './createtravall/createtravall.component'
         UserService,
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-      
+
   ],
   bootstrap: [AppComponent]
 })
