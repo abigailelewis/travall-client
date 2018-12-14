@@ -21,6 +21,7 @@ import { CreateComponent } from './create/create.component';
 const appRoutes: Routes = [
     { path: '', redirectTo: '/about', pathMatch: 'full' },
     // { path: '', component: AboutComponent,  data: {title: 'About'}, canActivate: [AuthGuard] },
+
     { path: 'about', component: AboutComponent, data: {title: 'About'}},
     { path: 'login', component: LoginComponent,  data: {title: 'Login'} },
     { path: 'signup', component: SignupComponent , data: {title: 'Siginup'} },
@@ -33,6 +34,7 @@ const appRoutes: Routes = [
         ]
 
 },
+
 
     // otherwise redirect to about
     // { path: '**', redirectTo: '' }
