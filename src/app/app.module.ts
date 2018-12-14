@@ -14,7 +14,7 @@ import { TransportationComponent } from './transportation/transportation.compone
 import { ActivityComponent } from './activity/activity.component';
 import { HeaderComponent } from './header/header.component';
 import { TravallComponent } from './travall/travall.component';
-// import { CreateComponent } from './create/create.component';
+import { CreateComponent } from './create/create.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { AuthComponent } from './auth/auth.component';
@@ -50,7 +50,7 @@ import { CreatetravallComponent } from './createtravall/createtravall.component'
     ActivityComponent,
     HeaderComponent,
     TravallComponent,
-    // CreateComponent,
+    CreateComponent,
     SignupComponent,
     LoginComponent,
     AuthComponent,

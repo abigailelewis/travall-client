@@ -29,7 +29,7 @@
       ],
       "module": "commonjs",
       "moduleResolution": "node",
-      "noImplicitAny": true,
+      "noImplicitAny": false,
       "sourceMap": true,
       "suppressImplicitAnyIndexErrors": true,
       "target": "ES5",
