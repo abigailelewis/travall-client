@@ -40,6 +40,7 @@ import { MatMenuModule} from '@angular/material/menu';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { AgmCoreModule } from '@agm/core';
 import { CreatetravallComponent } from './createtravall/createtravall.component';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { CreatetravallComponent } from './createtravall/createtravall.component'
     AboutComponent,
     AlertComponent,
     CreatetravallComponent,
+    MapComponent,
 
 
   ],
