@@ -11,13 +11,8 @@ export class CrewService {
 
   constructor(private http: HttpClient) { }
 
-  // getCrew(travallid: any) {
-  //   return this.http.get(`http://localhost:3000/travall/getcrew/${travallId}`)
-  // }
-//   getAll(travallId: number) {
-//     return this.http.get(apiUrl + `/getcrew/${travallId}`);
-// }
-// getAll(travallId: number) {
-//   return this.http.get<User[]>(apiUrl + `/getall/${travallId}`);
-// }
+  getCrew(travallid: any) {
+    return this.http.get(`http://localhost:3000/travall/getcrew/${travallid}`)
+  }
+
 }
