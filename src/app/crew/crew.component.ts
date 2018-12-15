@@ -8,8 +8,7 @@ import { CrewService } from '@/services/crew.service';
 })
 export class CrewComponent implements OnInit {
   members: any = [];
- 
-  tempTravallId: number;
+  currentTravall: any = localStorage.getItem('currentTravall');
 
   constructor(private crewService: CrewService) { }
 
@@ -19,7 +18,7 @@ export class CrewComponent implements OnInit {
   
   getCrew() {
     this.members = [];
-    this.crewService.getCrew(this.tempTravallId).subscribe((data: {}) => {
+    this.crewService.getCrew(this.currentTravall.id).subscribe((data: {}) => {
       console.log(data);
       // this.members = data.users;
     });
