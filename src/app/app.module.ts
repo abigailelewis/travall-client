@@ -40,6 +40,7 @@ import { MatMenuModule} from '@angular/material/menu';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { AgmCoreModule } from '@agm/core';
 import { CreatetravallComponent } from './createtravall/createtravall.component';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,9 @@ import { CreatetravallComponent } from './createtravall/createtravall.component'
     AboutComponent,
     AlertComponent,
     CreatetravallComponent,
-    
+    MapComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -84,7 +87,6 @@ import { CreatetravallComponent } from './createtravall/createtravall.component'
       apiKey: 'AIzaSyCWNzQvhDrg2EITW_mt9q7FxBoTfGmkEFs'
     })
 
-    
   ],
   providers: [,
         AuthGuard,
@@ -93,7 +95,7 @@ import { CreatetravallComponent } from './createtravall/createtravall.component'
         UserService,
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-      
+
   ],
   bootstrap: [AppComponent]
 })

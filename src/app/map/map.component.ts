@@ -1,12 +1,13 @@
 import { Component, OnInit, NgZone } from '@angular/core';
 import { MapsService } from '../services/maps.service';
 
+
 @Component({
-  selector: 'app-create',
-  templateUrl: './create.component.html',
-  styleUrls: ['./create.component.css']
+  selector: 'app-map',
+  templateUrl: './map.component.html',
+  styleUrls: ['./map.component.css']
 })
-export class CreateComponent implements OnInit {
+export class MapComponent implements OnInit {
   title: string = 'My first AGM project';
   lat: string = '';
   lng: string = '';
@@ -16,12 +17,12 @@ export class CreateComponent implements OnInit {
 
   location: Object;
 
-//   setAddress(addrObj) {
-//     this.zone.run(() => {
-//       this.addr = addrObj;
-//       this.addrKeys = Object.keys(addrObj);
-//     });
-//   }
+  setAddress(addrObj) {
+    this.zone.run(() => {
+      this.addr = addrObj;
+      this.addrKeys = Object.keys(addrObj);
+    });
+  }
 
   constructor(private map: MapsService, private zone: NgZone) { }
 
