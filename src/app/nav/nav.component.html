@@ -8,8 +8,10 @@
   <span>Travall</span>
   <span class="fill-remaining"></span>
 
-  <button mat-fab color="accent">About</button>
-  <button mat-fab color="accent">Travall</button>
+  <button mat-fab color="accent" routerLink="/about">About</button>
+  <button mat-fab color="accent"routerLink="/travall">Travall</button>
+  <button mat-fab color="accent" routerLink="/login">Login</button>
+  <a class="nav-item nav-link" (click)="logout()">Logout </a>
   <button mat-fab color="accent">MyTrav</button>
 </mat-toolbar>
 
