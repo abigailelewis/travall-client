@@ -33,6 +33,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSelectModule} from '@angular/material/select';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { MatCardModule } from '@angular/material';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
@@ -83,6 +84,7 @@ import { MapComponent } from './map/map.component';
     CommonModule,
     FormsModule,
     HttpClientModule,
+    NgbModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCWNzQvhDrg2EITW_mt9q7FxBoTfGmkEFs'
     })
