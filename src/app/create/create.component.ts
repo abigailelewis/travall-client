@@ -16,12 +16,12 @@ export class CreateComponent implements OnInit {
 
   location: Object;
 
-  setAddress(addrObj) {
-    this.zone.run(() => {
-      this.addr = addrObj;
-      this.addrKeys = Object.keys(addrObj);
-    });
-  }
+//   setAddress(addrObj) {
+//     this.zone.run(() => {
+//       this.addr = addrObj;
+//       this.addrKeys = Object.keys(addrObj);
+//     });
+//   }
 
   constructor(private map: MapsService, private zone: NgZone) { }
 
