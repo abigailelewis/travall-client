@@ -1,5 +1,5 @@
- import { Component, OnInit } from '@angular/core';
- import { CrewService } from '@/services/crew.service';
+import { Component, OnInit } from '@angular/core';
+import { CrewService } from '@/services/crew.service';
 
 @Component({
   selector: 'app-crew',
@@ -10,8 +10,12 @@ export class CrewComponent implements OnInit {
   members: any = [];
   currentTravall: any = localStorage.getItem('currentTravall');
 
+  constructor(private crewService: CrewService) { }
 
-
+  ngOnInit() {
+    this.getCrew();
+  }
+  
   getCrew() {
     this.members = [];
     this.crewService.getCrew(this.currentTravall.id).subscribe((data: {}) => {
@@ -20,6 +24,5 @@ export class CrewComponent implements OnInit {
     });
   }
 
-
-
+}
 
