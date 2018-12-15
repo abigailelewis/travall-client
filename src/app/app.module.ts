@@ -83,13 +83,7 @@ import { CreatetravallComponent } from './createtravall/createtravall.component'
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCWNzQvhDrg2EITW_mt9q7FxBoTfGmkEFs'
     })
-    // RouterModule.forRoot([
-    //   { 
-    //     path: '',
-    //     component: AboutComponent,
-    //     canActivate: [AuthGuard],	
-    //   }
-    //   ])
+
     
   ],
   providers: [,

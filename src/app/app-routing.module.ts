@@ -25,8 +25,7 @@ const appRoutes: Routes = [
 },
 
 
-    // otherwise redirect to about
-    // { path: '**', redirectTo: '' }
+   
 ];
 export const routing = RouterModule.forRoot(appRoutes);
 @NgModule({
