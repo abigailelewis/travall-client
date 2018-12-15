@@ -8,7 +8,7 @@ import { CrewService } from '@/services/crew.service';
 })
 export class CrewComponent implements OnInit {
   members: any = [];
-  currentTravall: any = JSON.parse(localStorage.getItem('currentTravall'));
+  currentTravall: any = localStorage.getItem('currentTravall');
 
   constructor(private crewService: CrewService) { }
 

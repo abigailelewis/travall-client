@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 
 
 // const apiUrl = ' https://travall-server.herokuapp.com'
-const apiUrl = ' http://localhost:3000'
+const apiUrl = 'http://localhost:3000'
 
 
 @Injectable()
