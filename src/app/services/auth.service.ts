@@ -4,7 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 
 
-const apiUrl = ' https://travall-server.herokuapp.com'
+// const apiUrl = ' https://travall-server.herokuapp.com'
+const apiUrl = ' http://localhost:4000/travall'
 
 
 @Injectable()
