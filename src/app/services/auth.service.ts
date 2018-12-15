@@ -12,21 +12,17 @@ const apiUrl = 'http://localhost:3000'
 export class AuthService {
     constructor(private http: HttpClient) { }
 
-  
-
     login(username: string, password: string) {
         return this.http.post<any>(apiUrl + '/user/login', { username, password} )
             .pipe(map(user => {            
                 if (user && user.sessionToken) {
                     localStorage.setItem('currentUser', JSON.stringify(user));
                 }
-
                 return user;
             }));
     }
 
     logout() {
-      
         localStorage.removeItem('currentUser');
     }
 }
