@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { User } from '../models/user';
 
 // const apiUrl = 'https://travall-server.herokuapp.com'
-const apiUrl = 'http://localhost:4000/travall'
+const apiUrl = 'http://localhost:3000/'
 @Injectable({ providedIn: 'root' })
 export class UserService {
     constructor(private http: HttpClient) { }
