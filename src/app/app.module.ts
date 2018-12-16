@@ -25,6 +25,7 @@ import { JwtInterceptor } from './help/jwt.interceptor';
 import { ErrorInterceptor } from './help/error.interceptor';
 import { AlertService  } from './services/alert.service';
 import {  AuthService } from './services/auth.service';
+import { AdminService } from './services/admin.service';
 import {  UserService } from './services/user.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -41,6 +42,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { AgmCoreModule } from '@agm/core';
 import { CreatetravallComponent } from './createtravall/createtravall.component';
 import { MapComponent } from './map/map.component';
+import { AdmincontrolComponent } from './admincontrol/admincontrol.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +61,7 @@ import { MapComponent } from './map/map.component';
     AlertComponent,
     CreatetravallComponent,
     MapComponent,
+    AdmincontrolComponent,
     
 
 
@@ -95,6 +98,7 @@ import { MapComponent } from './map/map.component';
         AlertService,
         AuthService,
         UserService,
+        AdminService,
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
