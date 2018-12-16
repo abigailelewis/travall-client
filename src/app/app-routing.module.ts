@@ -18,21 +18,9 @@ const appRoutes: Routes = [
     { path: 'signup', component: SignupComponent , data: {title: 'Siginup'} },
     { path: 'admin', component: AdminComponent, data: {title: 'Admin'}},
     { path:'admincontrol', component: AdmincontrolComponent, data: {title: 'Admincontrol'}},
-
-
-    { path: 'travall', component: TravallComponent , data: {title: 'Travall'}, canActivate: [AuthGuard],
-        children: [{
-        
-            path:'create',
-            component: CreateComponent
-        },
-        ]
-
-},
-
-
-   
+    { path: 'travall', component: TravallComponent, data: {title: 'Travall'}, canActivate: [AuthGuard]}  
 ];
+
 export const routing = RouterModule.forRoot(appRoutes);
 @NgModule({
     imports: [RouterModule.forRoot(appRoutes)],

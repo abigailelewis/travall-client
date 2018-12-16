@@ -14,6 +14,7 @@ export class CrewComponent implements OnInit {
 
   ngOnInit() {
     this.getCrew();
+
   }
 
   getCrew() {
