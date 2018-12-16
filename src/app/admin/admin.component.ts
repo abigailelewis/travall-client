@@ -64,5 +64,9 @@ export class AdminComponent implements OnInit {
                     this.loading = false;
                 });
     }
+    logout() {
+        this.adminService.logout();
+        this.router.navigate(['/admin/login']);
+      }
    
 }

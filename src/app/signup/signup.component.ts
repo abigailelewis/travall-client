@@ -15,6 +15,7 @@ export class SignupComponent implements OnInit {
     loading = false;
     submitted = false;
     returnUrl: string;
+    keepAfterNavigationChange = false;
 
     constructor(
         private formBuilder: FormBuilder,
@@ -43,7 +44,7 @@ export class SignupComponent implements OnInit {
 
     onSubmit() {
         this.submitted = true;
-
+        this.keepAfterNavigationChange = false;
      
         if (this.registerForm.invalid) {
             return;
@@ -54,7 +55,8 @@ export class SignupComponent implements OnInit {
             .pipe(first())
             .subscribe(
                 data => {
-                    this.alertService.success('Registration successful', true);
+                    this.alertService.success('Registration successful', false);
+                    
                     this.router.navigate(['/login']);
                 },
                 error => {
