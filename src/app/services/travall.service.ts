@@ -22,7 +22,7 @@ export class TravallService {
     return this.http.post(apiUrl + `/create`, travall)
       .subscribe(response => {
         sessionStorage.setItem("currentTravall", JSON.stringify(response));
-        this.router.navigate(['/about']);  //CHANGE TO TRAVALL
+        this.router.navigate(['/travall']);
       });
   }
 }
