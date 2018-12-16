@@ -21,7 +21,7 @@ export class TravallService {
   createTravall(travall: any): any {
     return this.http.post(apiUrl + `/create`, travall)
       .subscribe(response => {
-        localStorage.setItem("currentTravall", JSON.stringify(response));
+        sessionStorage.setItem("currentTravall", JSON.stringify(response));
         this.router.navigate(['/about']);  //CHANGE TO TRAVALL
       });
   }

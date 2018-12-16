@@ -7,7 +7,7 @@ import { CrewService } from '@/services/crew.service';
   styleUrls: ['./crew.component.css']
 })
 export class CrewComponent implements OnInit {
-  currentTravall: any = JSON.parse(localStorage.getItem('currentTravall'));
+  currentTravall: any = JSON.parse(sessionStorage.getItem('currentTravall'));
   members: any = [];
 
   constructor(private crewService: CrewService) { }
