@@ -1,15 +1,13 @@
-<div *ngIf="(currentAdmin != '')"> <!-- this isn't working-->
-    <app-nav></app-nav>
-</div>
+<app-nav></app-nav>
 
 
 <div class="container" style="align-content: center">
     <div class="row" style="margin: auto">
 
-            <app-alert></app-alert>
+        <app-alert></app-alert>
         <div class="col" style="align-self: center">
             <router-outlet></router-outlet>
-            </div>
+        </div>
 
     </div>
 </div>
