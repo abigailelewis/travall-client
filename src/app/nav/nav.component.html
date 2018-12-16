@@ -13,7 +13,7 @@
         <button href="#">Add a Travall</button>
           <ul id="dropdown-travalls">
             <li *ngFor="let travall of travalls">
-              <a (click)="setCurrentTravall(travall)">{{travall.title}}</a>
+              <a (click)="setCurrentTravall(travall)" routerLink="/travall">{{travall.title}}</a>
             </li>
           </ul>
         </div>

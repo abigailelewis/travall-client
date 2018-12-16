@@ -39,4 +39,8 @@ export class NavComponent implements OnInit {
     }
   }
 
+  setCurrentTravall(travall: any) {
+    localStorage.setItem('currentTravall', JSON.stringify(travall));
+  }
+
 }
