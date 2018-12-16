@@ -22,6 +22,6 @@ export class AdminService {
     }
 
     logout() {
-        sessionStorage.removeItem('currentAdmin');
+        sessionStorage.clear();
     }
 }
