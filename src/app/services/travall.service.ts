@@ -18,11 +18,11 @@ export class TravallService {
     return this.http.get(apiUrl + `/getall/` + user.id)
   }
 
-  createTravall(travall: any) : any {
+  createTravall(travall: any): any {
     return this.http.post(apiUrl + `/create`, travall)
-    .subscribe(response => {
-      localStorage.setItem("currentTravall", JSON.stringify(response));
-      this.router.navigate(['/about']);
-  });
-}
+      .subscribe(response => {
+        localStorage.setItem("currentTravall", JSON.stringify(response));
+        this.router.navigate(['/about']);  //CHANGE TO TRAVALL
+      });
+  }
 }

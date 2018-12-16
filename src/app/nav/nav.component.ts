@@ -13,7 +13,8 @@ import { User } from '../models/user';
 })
 export class NavComponent implements OnInit {
   // currentUser: User;
-  currentUser: any = JSON.parse(localStorage.getItem('currentUser'));
+  currentUser: any = JSON.parse(localStorage.getItem('currentUser')) || '';
+  travalls: any = [];
 
   constructor(private router: Router, private authService: AuthService, private travallService: TravallService) { }
 
@@ -23,11 +24,23 @@ export class NavComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getTravalls();
+  }
+
+  getTravalls() {
     if (this.currentUser != '') {
-      this.travallService.getTravalls(this.currentUser.currentUser.id)
+      this.travalls = [];
+      this.travallService.getTravalls(this.currentUser.user)
+        .subscribe((data: any) => {
+        this.travalls = data;
+      });
     } else {
       console.log('no current user');
     }
+  }
+
+  setCurrentTravall(travall: any) {
+    localStorage.setItem('currentTravall', JSON.stringify(travall));
   }
 
 }
