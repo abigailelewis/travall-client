@@ -56,7 +56,7 @@ export class AdminComponent implements OnInit {
         this.adminService.login(this.f.username.value, this.f.password.value)
             .pipe(first())
             .subscribe(
-                data => { this.router.navigate(['/about'])
+                data => { this.router.navigate(['/admincontrol'])
                  
                 },
                 error => {
