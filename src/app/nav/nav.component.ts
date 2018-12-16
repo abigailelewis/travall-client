@@ -11,7 +11,6 @@ import { User } from '../models/user';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-  // currentUser: User;
   currentUser: any = JSON.parse(sessionStorage.getItem('currentUser')) || '';
   travalls: any = [];
 
@@ -34,7 +33,7 @@ export class NavComponent implements OnInit {
         this.travalls = data;
       });
     } else {
-      console.log('no current user');
+      return
     }
   }
 
