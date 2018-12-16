@@ -16,14 +16,10 @@ const appRoutes: Routes = [
     { path: 'about', component: AboutComponent, data: {title: 'About'}},
     { path: 'login', component: LoginComponent,  data: {title: 'Login'} },
     { path: 'signup', component: SignupComponent , data: {title: 'Siginup'} },
-    { path: 'admin', component: AdminComponent, data: {title: 'Admin'},
-        // children: [{
-        //     path:'admincontrol',
-        //     component: AdmincontrolComponent
+    { path: 'admin', component: AdminComponent, data: {title: 'Admin'}},
+    { path:'admincontrol', component: AdmincontrolComponent, data: {title: 'Admincontrol'}},
 
-        // }]
-        
-},
+
     { path: 'travall', component: TravallComponent , data: {title: 'Travall'}, canActivate: [AuthGuard],
         children: [{
         
