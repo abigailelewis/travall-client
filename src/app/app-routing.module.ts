@@ -14,7 +14,7 @@ const appRoutes: Routes = [
     { path: 'about', component: AboutComponent, data: {title: 'About'}},
     { path: 'login', component: LoginComponent,  data: {title: 'Login'} },
     { path: 'signup', component: SignupComponent , data: {title: 'Siginup'} },
-    { path: 'travall', component: TravallComponent , data: {title: 'Travall'},
+    { path: 'travall', component: TravallComponent , data: {title: 'Travall'}, canActivate: [AuthGuard],
         children: [{
         
             path:'create',

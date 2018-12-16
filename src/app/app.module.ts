@@ -4,7 +4,7 @@ import { ReactiveFormsModule  }    from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { routing} from './app-routing.module';
 import { Routes, RouterModule } from '@angular/router';
-
+import { Observable } from 'rxjs'
 
 // import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,7 +17,7 @@ import { TravallComponent } from './travall/travall.component';
 import { CreateComponent } from './create/create.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
-import { AuthComponent } from './auth/auth.component';
+import { AdminComponent } from './admin/admin.component';
 import { AboutComponent } from './about/about.component';
 import { AlertComponent } from './alert/alert.component';
 import { AuthGuard } from './help/auth.guard';
@@ -54,11 +54,12 @@ import { MapComponent } from './map/map.component';
     CreateComponent,
     SignupComponent,
     LoginComponent,
-    AuthComponent,
+    AdminComponent,
     AboutComponent,
     AlertComponent,
     CreatetravallComponent,
     MapComponent,
+    
 
 
   ],
@@ -83,6 +84,7 @@ import { MapComponent } from './map/map.component';
     CommonModule,
     FormsModule,
     HttpClientModule,
+    
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCWNzQvhDrg2EITW_mt9q7FxBoTfGmkEFs'
     })
