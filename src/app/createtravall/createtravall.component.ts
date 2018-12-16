@@ -14,7 +14,7 @@ export class CreatetravallComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private travallService: TravallService) { }
 
   ngOnInit() {
-    this.user = JSON.parse(localStorage.getItem('currentUser'));
+    this.user = JSON.parse(sessionStorage.getItem('currentUser'));
     this.createTravallForm = this.formBuilder.group({
       title: new FormControl(),
       location: new FormControl(),

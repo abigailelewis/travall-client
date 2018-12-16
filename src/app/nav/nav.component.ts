@@ -13,7 +13,7 @@ import { User } from '../models/user';
 })
 export class NavComponent implements OnInit {
   // currentUser: User;
-  currentUser: any = JSON.parse(localStorage.getItem('currentUser')) || '';
+  currentUser: any = JSON.parse(sessionStorage.getItem('currentUser')) || '';
   travalls: any = [];
 
   constructor(private router: Router, private authService: AuthService, private travallService: TravallService) { }
@@ -40,7 +40,7 @@ export class NavComponent implements OnInit {
   }
 
   setCurrentTravall(travall: any) {
-    localStorage.setItem('currentTravall', JSON.stringify(travall));
+    sessionStorage.setItem('currentTravall', JSON.stringify(travall));
   }
 
 }
