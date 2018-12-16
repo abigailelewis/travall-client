@@ -6,6 +6,8 @@ import { SignupComponent } from './signup/signup.component';
 import { TravallComponent} from './travall/travall.component';
 import { AuthGuard } from './help/auth.guard';
 import { CreateComponent } from './create/create.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdmincontrolComponent} from './admincontrol/admincontrol.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/about', pathMatch: 'full' },
@@ -14,7 +16,15 @@ const appRoutes: Routes = [
     { path: 'about', component: AboutComponent, data: {title: 'About'}},
     { path: 'login', component: LoginComponent,  data: {title: 'Login'} },
     { path: 'signup', component: SignupComponent , data: {title: 'Siginup'} },
-    { path: 'travall', component: TravallComponent , data: {title: 'Travall'},
+    { path: 'admin', component: AdminComponent, data: {title: 'Admin'},
+        // children: [{
+        //     path:'admincontrol',
+        //     component: AdmincontrolComponent
+
+        // }]
+        
+},
+    { path: 'travall', component: TravallComponent , data: {title: 'Travall'}, canActivate: [AuthGuard],
         children: [{
         
             path:'create',
