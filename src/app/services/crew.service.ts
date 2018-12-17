@@ -14,7 +14,11 @@ export class CrewService {
   constructor(private http: HttpClient) { }
 
   getCrew(travallid: any): Observable<User[]> {
-    return this.http.get<User[]>(`http://localhost:3000/travall/getcrew/${travallid}`)
+    return this.http.get<User[]>(`http://localhost:3000/travall/getcrew/${travallid}`);
+  }
+
+  addMember(email: any, travallid: any) {
+    return this.http.post(`${apiUrl}/travall/adduser/${travallid}`, email);
   }
 
 }

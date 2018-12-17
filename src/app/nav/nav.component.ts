@@ -39,6 +39,7 @@ export class NavComponent implements OnInit {
 
   setCurrentTravall(travall: any) {
     sessionStorage.setItem('currentTravall', JSON.stringify(travall));
+    location.reload();
   }
 
 }

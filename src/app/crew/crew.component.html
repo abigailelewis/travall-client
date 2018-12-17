@@ -1,4 +1,6 @@
 <div>
   <ul>Crew Members</ul>
   <li *ngFor="let member of members"><span>{{member.username}}</span></li>
+  <button mat-button (click)="openDialog()">Add Member
+  </button>
 </div>
