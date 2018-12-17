@@ -1,3 +1,46 @@
 <p>
   <a class="nav-item nav-link" (click)="logout()">Logout </a>
 </p>
+<div>
+  <h1>All Members</h1>
+  <div *ngFor="let u of user">
+   
+      <mat-card >{{u.username}}     <button style="float: right; width: 24px; text-align: center; color: red;"  class="delete" title="delete user"
+        (click)="delete(u.id)">x</button></mat-card> 
+        <mat-divider></mat-divider>
+      </div>
+      <h1>All Tavalls</h1>
+  <div *ngFor="let t of travall">
+   
+      <mat-card >{{t.title}}     <button style="float: right; width: 24px; text-align: center; color: red;"  class="delete" title="delete travall"
+        (click)="delete(t.id)">x</button></mat-card> 
+        <mat-divider></mat-divider>
+      </div>
+
+  <!-- <ul>All travalls</ul>
+  <li *ngFor="let t of travall">
+   
+      <span class="badge">{{t.title}}</span> 
+    
+
+    <button class="delete" title="delete travall"
+(click)="deleteTravall(t.id)">x</button>
+  </li> -->
+  <!-- <li *ngFor="let u of user"><span>{{u.username}}</span><button (click)="delete(user.id)" style="text-align: center;">x</button></li>
+  <button (click)="delete(u.id)" style="float: right; width: 24px; text-align: center;">x</button>
+</div> -->
+<!-- <div class="body">
+  <h1 class="card-header col-sm bg-light border-success">Let the spirits guide you to the right Plant! </h1>
+  <div class="row">
+    <div class="card border-success col-sm-3 mt-3 rounded bg-light " *ngFor="let product of products">
+      <div *ngFor="let u of user"><span>{{u.username}}</span>>
+        <button (click)="delete(user.id)" style="float: right; width: 24px; text-align: center;">x</button>
+      </div>
+      <div class="card-body text-success">
+        <h1 class="card-header bg-transparent border-success">{{u.username}}</h1>
+        <p class="card-text">{{u.email}}</p>
+        
+      </div>
+    </div>
+  </div>
+</div> -->

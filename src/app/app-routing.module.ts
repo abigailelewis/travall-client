@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { TravallComponent} from './travall/travall.component';
 import { AuthGuard } from './help/auth.guard';
+import { AdminGuard } from './help/admin.guard';
 import { CreateComponent } from './create/create.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdmincontrolComponent} from './admincontrol/admincontrol.component';
@@ -17,7 +18,7 @@ const appRoutes: Routes = [
     { path: 'login', component: LoginComponent,  data: {title: 'Login'} },
     { path: 'signup', component: SignupComponent , data: {title: 'Siginup'} },
     { path: 'admin', component: AdminComponent, data: {title: 'Admin'}},
-    { path:'admincontrol', component: AdmincontrolComponent, data: {title: 'Admincontrol'}},
+    { path:'admincontrol', component: AdmincontrolComponent, data: {title: 'Admincontrol'}, canActivate: [AdminGuard]},
     { path: 'travall', component: TravallComponent, data: {title: 'Travall'}, canActivate: [AuthGuard]}  
 ];
 

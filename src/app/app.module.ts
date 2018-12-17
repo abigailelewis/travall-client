@@ -27,6 +27,7 @@ import { AlertService  } from './services/alert.service';
 import {  AuthService } from './services/auth.service';
 import { AdminService } from './services/admin.service';
 import {  UserService } from './services/user.service';
+import { AdmincontrolService } from './services/admincontrol.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
@@ -101,6 +102,7 @@ import { AdmincontrolComponent } from './admincontrol/admincontrol.component';
         AuthService,
         UserService,
         AdminService,
+        AdmincontrolService,
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
