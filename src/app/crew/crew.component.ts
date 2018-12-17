@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 import { CrewService } from '@/services/crew.service';
+import { AddMemberComponent } from '../add-member/add-member.component';
+import { MatDialog, MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-crew',
@@ -7,23 +9,31 @@ import { CrewService } from '@/services/crew.service';
   styleUrls: ['./crew.component.css']
 })
 export class CrewComponent implements OnInit {
-  currentTravall: any = JSON.parse(sessionStorage.getItem('currentTravall'));
+  currentTravall: any = JSON.parse(sessionStorage.getItem('currentTravall')) || '';
   members: any = [];
 
-  constructor(private crewService: CrewService) { }
+  constructor(private crewService: CrewService, private dialog: MatDialog) { }
 
   ngOnInit() {
     this.getCrew();
-
   }
 
   getCrew() {
     this.members = [];
-    this.crewService.getCrew(this.currentTravall.id)
-      .subscribe((data: any) => {
-        this.members = data.members.users;
-      });
+    if (this.currentTravall != '') {
+      this.crewService.getCrew(this.currentTravall.id)
+        .subscribe((data: any) => {
+          this.members = data.members.users;
+        });
+    } else {
+      return
+    }
+  }
+
+  openDialog() {
+    this.dialog.open(AddMemberComponent);
   }
 
 }
+
 
