@@ -25,7 +25,8 @@ import { ErrorInterceptor } from './help/error.interceptor';
 import { AlertService } from './services/alert.service';
 import { AuthService } from './services/auth.service';
 import { AdminService } from './services/admin.service';
-import { UserService } from './services/user.service';
+import {  UserService } from './services/user.service';
+import { AdmincontrolService } from './services/admincontrol.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
@@ -37,7 +38,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddMemberComponent } from './add-member/add-member.component';
 // import { MatDialog, MatDialogRef } from '@angular/material';
 import { MatDialogModule } from '@angular/material/dialog';
-
 import { MatCardModule } from '@angular/material';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatMenuModule } from '@angular/material/menu';
@@ -102,13 +102,15 @@ import { AlertComponent } from './alert/alert.component';
 
   ],
   providers: [,
-    AuthGuard,
-    AlertService,
-    AuthService,
-    UserService,
-    AdminService,
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+        AuthGuard,
+        AlertService,
+        AuthService,
+        UserService,
+        AdminService,
+        AdmincontrolService,
+        { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
 
   ],
   bootstrap: [AppComponent],
