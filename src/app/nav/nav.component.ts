@@ -26,11 +26,11 @@ export class NavComponent implements OnInit {
   }
 
   getTravalls() {
+    this.travalls = [];
     if (this.currentUser != '') {
-      this.travalls = [];
       this.travallService.getTravalls(this.currentUser.user)
         .subscribe((data: any) => {
-        this.travalls = data;
+        return this.travalls = data;
       });
     } else {
       return
@@ -39,6 +39,7 @@ export class NavComponent implements OnInit {
 
   setCurrentTravall(travall: any) {
     sessionStorage.setItem('currentTravall', JSON.stringify(travall));
+    this.router.navigate(['/travall']);
   }
 
 }

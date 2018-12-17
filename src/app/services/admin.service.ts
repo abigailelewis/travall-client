@@ -24,4 +24,5 @@ export class AdminService {
     logout() {
         sessionStorage.clear();
     }
+
 }
