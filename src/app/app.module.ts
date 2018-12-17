@@ -25,12 +25,8 @@ import { ErrorInterceptor } from './help/error.interceptor';
 import { AlertService } from './services/alert.service';
 import { AuthService } from './services/auth.service';
 import { AdminService } from './services/admin.service';
-<<<<<<< HEAD
 import {  UserService } from './services/user.service';
 import { AdmincontrolService } from './services/admincontrol.service';
-=======
-import { UserService } from './services/user.service';
->>>>>>> 2a39b267cfc52cc8d3e6ac531878d37810b4d471
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
@@ -107,7 +103,6 @@ import { AlertComponent } from './alert/alert.component';
 
   ],
   providers: [,
-<<<<<<< HEAD
         AuthGuard,
         AlertService,
         AuthService,
@@ -116,15 +111,6 @@ import { AlertComponent } from './alert/alert.component';
         AdmincontrolService,
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-=======
-    AuthGuard,
-    AlertService,
-    AuthService,
-    UserService,
-    AdminService,
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
->>>>>>> 2a39b267cfc52cc8d3e6ac531878d37810b4d471
 
   ],
   bootstrap: [AppComponent],
