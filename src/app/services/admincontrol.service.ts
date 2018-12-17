@@ -5,8 +5,8 @@ import { Observable, of  } from 'rxjs';
 import { map, catchError, tap } from 'rxjs/operators';
 import { Travall } from '../models/travall';
 
-// const apiUrl = 'https://travall-server.herokuapp.com'
-const apiUrl = 'http://localhost:3000/travall'
+ const apiUrl = 'https://travall-server.herokuapp.com'
+//const apiUrl = 'http://localhost:3000/travall'
 // const httpOptions = {
 //     headers: new HttpHeaders({
 //         'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ export class AdmincontrolService {
   getAlltravall(travall: any): Observable<Travall[]> {
     return this.http.get<Travall[]>(`http://localhost:3000/admin/travall`)
   }
-  
+
   deleteUser(user: User | number): Observable<User> {
     const id = typeof user === 'number' ? user : user.id;
     return this.http.delete<User>(`http://localhost:3000/admin/user/${id}`).pipe(
