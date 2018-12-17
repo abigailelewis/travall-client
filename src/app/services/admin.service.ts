@@ -8,14 +8,14 @@ const apiUrl = 'http://localhost:3000'
 
 
 @Injectable()
-export class AuthService {
+export class AdminService {
     constructor(private http: HttpClient) { }
 
     login(username: string, password: string) {
-        return this.http.post<any>(apiUrl + '/user/login', { username, password} )
-            .pipe(map(user => {            
+        return this.http.post<any>(apiUrl + '/admin/login', { username, password} )
+            .pipe(map(user => {       
                 if (user && user.sessionToken) {
-                    sessionStorage.setItem('currentUser', JSON.stringify(user));
+                    sessionStorage.setItem('currentAdmin', JSON.stringify(user));
                 }
                 return user;
             }));
