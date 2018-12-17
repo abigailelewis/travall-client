@@ -1,17 +1,16 @@
-
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { AlertService} from '../services/alert.service'
-import { AuthService } from '../services/auth.service'
+import { AdminService } from '../services/admin.service'
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-admin',
+  templateUrl: './admin.component.html',
+  styleUrls: ['./admin.component.css']
 })
-export class LoginComponent implements OnInit {
+export class AdminComponent implements OnInit {
     loginForm: FormGroup;
     loading = false;
     submitted = false;
@@ -23,7 +22,7 @@ export class LoginComponent implements OnInit {
         private route: ActivatedRoute,
         private router: Router,
         private alertService: AlertService,
-        private authService: AuthService) {}
+        private adminService: AdminService) {}
         
 
 
@@ -54,10 +53,10 @@ export class LoginComponent implements OnInit {
         }
 
         this.loading = true;
-        this.authService.login(this.f.username.value, this.f.password.value)
+        this.adminService.login(this.f.username.value, this.f.password.value)
             .pipe(first())
             .subscribe(
-                data => { this.router.navigate(['/travall'])
+                data => { this.router.navigate(['/admincontrol'])
                  
                 },
                 error => {
@@ -65,10 +64,9 @@ export class LoginComponent implements OnInit {
                     this.loading = false;
                 });
     }
+    logout() {
+        this.adminService.logout();
+        this.router.navigate(['/admin/login']);
+      }
    
 }
-
-
-
-
-

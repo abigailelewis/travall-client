@@ -5,5 +5,4 @@ export class User {
     password: string; 
     color: string;
     sessionToken: string;
-    travallId: any;
 }

@@ -5,7 +5,8 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { TravallComponent} from './travall/travall.component';
 import { AuthGuard } from './help/auth.guard';
-import { CreateComponent } from './create/create.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdmincontrolComponent} from './admincontrol/admincontrol.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/about', pathMatch: 'full' },
@@ -14,19 +15,11 @@ const appRoutes: Routes = [
     { path: 'about', component: AboutComponent, data: {title: 'About'}},
     { path: 'login', component: LoginComponent,  data: {title: 'Login'} },
     { path: 'signup', component: SignupComponent , data: {title: 'Siginup'} },
-    { path: 'travall', component: TravallComponent , data: {title: 'Travall'},
-        children: [{
-        
-            path:'create',
-            component: CreateComponent
-        },
-        ]
-
-},
-
-
-   
+    { path: 'admin', component: AdminComponent, data: {title: 'Admin'}},
+    { path:'admincontrol', component: AdmincontrolComponent, data: {title: 'Admincontrol'}},
+    { path: 'travall', component: TravallComponent, data: {title: 'Travall'}, canActivate: [AuthGuard]}
 ];
+
 export const routing = RouterModule.forRoot(appRoutes);
 @NgModule({
     imports: [RouterModule.forRoot(appRoutes)],

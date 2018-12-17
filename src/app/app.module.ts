@@ -4,7 +4,7 @@ import { ReactiveFormsModule  }    from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { routing} from './app-routing.module';
 import { Routes, RouterModule } from '@angular/router';
-
+import { Observable } from 'rxjs'
 
 // import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,10 +14,9 @@ import { TransportationComponent } from './transportation/transportation.compone
 import { ActivityComponent } from './activity/activity.component';
 import { HeaderComponent } from './header/header.component';
 import { TravallComponent } from './travall/travall.component';
-import { CreateComponent } from './create/create.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
-import { AuthComponent } from './auth/auth.component';
+import { AdminComponent } from './admin/admin.component';
 import { AboutComponent } from './about/about.component';
 import { AlertComponent } from './alert/alert.component';
 import { AuthGuard } from './help/auth.guard';
@@ -25,6 +24,7 @@ import { JwtInterceptor } from './help/jwt.interceptor';
 import { ErrorInterceptor } from './help/error.interceptor';
 import { AlertService  } from './services/alert.service';
 import {  AuthService } from './services/auth.service';
+import { AdminService } from './services/admin.service';
 import {  UserService } from './services/user.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -42,6 +42,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { AgmCoreModule } from '@agm/core';
 import { CreatetravallComponent } from './createtravall/createtravall.component';
 import { MapComponent } from './map/map.component';
+import { AdmincontrolComponent } from './admincontrol/admincontrol.component';
 
 @NgModule({
   declarations: [
@@ -52,14 +53,15 @@ import { MapComponent } from './map/map.component';
     ActivityComponent,
     HeaderComponent,
     TravallComponent,
-    CreateComponent,
     SignupComponent,
     LoginComponent,
-    AuthComponent,
+    AdminComponent,
     AboutComponent,
     AlertComponent,
     CreatetravallComponent,
     MapComponent,
+    AdmincontrolComponent,
+
 
 
   ],
@@ -94,6 +96,7 @@ import { MapComponent } from './map/map.component';
         AlertService,
         AuthService,
         UserService,
+        AdminService,
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 

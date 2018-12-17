@@ -1,23 +1,38 @@
 
-
 <mat-toolbar color="primary">
-  <button mat-icon-button>
-    <mat-icon>menu</mat-icon>
-  </button>
+      <button mat-icon-button class="menutitle" [matMenuTriggerFor]="menu">
+          <i class="material-icons">
+              airplanemode_active
+              </i>
+            </button>
+
 
   <span>Travall</span>
   <span class="fill-remaining"></span>
 
-  <button mat-flat-button color="accent" routerLink="/about">About</button>
-  <button mat-flat-button color="accent" routerLink="/login">Login/Register</button>
+  <button mat-fab color="accent" routerLink="/about">About</button>
+  <div class="dropdown">
+    <button mat-fab color="accent" routerLink="/travall">Travall</button>
+      <div class="dropdown-content">
+        <button href="#">Add a Travall</button>
+          <ul id="dropdown-travalls">
+            <li *ngFor="let travall of travalls">
+              <a (click)="setCurrentTravall(travall)" routerLink="/travall">{{travall.title}}</a>
+            </li>
+          </ul>
+        </div>
+  </div>
+  <button mat-fab color="accent" routerLink="/login">Login</button>
+  <button mat-fab color="accent" routerLink="/admin">Admin</button>
 
-</mat-toolbar>
 
 
 
 
 
- <!-- <nav class="navbar navbar-expand navbar-dark bg-dark" >
+
+
+<!-- <nav class="navbar navbar-expand navbar-dark bg-dark" >
     <div class="navbar-nav">
         <a class="nav-item nav-link" routerLink="/about">About</a>
         <a class="nav-item nav-link" routerLink="/login">Login/Register</a>
@@ -28,10 +43,10 @@
 <!-- *ngIf = "currentUser" -->
 
 <!-- <nav class= "navbar navbar-expand-lg navbar-light" style="background-color: whitesmoke">
- 
+
 <a class="navbar-brand brand-custom" href="">Travall</a>
 <div class="collapse navbar-collapse" id="navbarText">
-  
+
   <ul class="navbar-nav ml-auto">
     <li class="nav-item">
       <a class="nav-link login-custom" routerLink="/login">Login/Register</a>
@@ -43,8 +58,8 @@
     <a class="nav-link register-custom" routerLink="/travall">Travall</a>
   </li> -->
 
-    <!-- <li class="nav-item dropdown btn-group" dropdown> -->
-        <!-- <div class="dropdown" mdbDropdown>
+<!-- <li class="nav-item dropdown btn-group" dropdown> -->
+<!-- <div class="dropdown" mdbDropdown>
             <button mdbDropdownToggle type="button" mdbBtn color="primary" class="dropdown-toggle waves-light"
               mdbWavesEffect>
               Travall
@@ -52,20 +67,20 @@
 
             <div class="dropdown-menu">
                 <a class="dropdown-item" routerLink="/create" >Create Travall</a>
-                
+
                 <div class="divider dropdown-divider"></div>
 
                 <a class="dropdown-item" routerLink="/about">Separated link</a>
               </div>
             </div> -->
-        <!-- <a dropdownToggle type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>Travall<span class="caret"></span></a>
+<!-- <a dropdownToggle type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>Travall<span class="caret"></span></a>
         <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
             <a class="dropdown-item waves-light" routerLink="/create" mdbWavesEffect>Create Travall</a>
             <div class="divider dropdown-divider"></div>
             <a class="dropdown-item waves-light" href="#" mdbWavesEffect>Another action</a>
-        
+
           </div>
-     
+
       </li> -->
 <!--       <li class="nav-item">
           <a class="nav-link nav-link" (click)="logout()"  >Logout </a>
@@ -75,6 +90,3 @@
 
 
 </nav> -->
-
-
-

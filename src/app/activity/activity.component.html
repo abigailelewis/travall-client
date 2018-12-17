@@ -1,2 +1,33 @@
+<form [formGroup]="createActivity" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" formControlName="title" name="title">
+  </div>
+  <div class="form-group">
+    <label for="startDate">Starting Date</label>
+    <input type="date" formControlName="startDate" name="startDate">
+  </div>
+  <div class="form-group">
+    <label for="endDate">Ending Date</label>
+    <input type="date" formControlName="endDate" name="endDate">
+  </div>
+  <div class="form-group">
+      <label for="startTime">Start Time</label>
+      <input type="text" formControlName="startTime" name="startTime">
+    </div>
+    <div class="form-group">
+        <label for="description">End Time</label>
+        <input type="text" formControlName="endTime" name="endTime">
+      </div>
+      <div class="form-group">
+          <label for="meetingLocation">Meeting Location</label>
+          <input type="text" formControlName="meetingLocation" name="meetingLocation">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" formControlName="description" name="description">
+          </div>
+</form>
 
+<button type="submit">Submit</button>
 

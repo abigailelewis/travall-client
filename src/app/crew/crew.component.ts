@@ -7,21 +7,22 @@ import { CrewService } from '@/services/crew.service';
   styleUrls: ['./crew.component.css']
 })
 export class CrewComponent implements OnInit {
+  currentTravall: any = JSON.parse(sessionStorage.getItem('currentTravall'));
   members: any = [];
-  currentTravall: any = localStorage.getItem('currentTravall');
 
   constructor(private crewService: CrewService) { }
 
   ngOnInit() {
     this.getCrew();
+
   }
-  
+
   getCrew() {
     this.members = [];
-    this.crewService.getCrew(this.currentTravall.id).subscribe((data: {}) => {
-      console.log(data);
-      // this.members = data.users;
-    });
+    this.crewService.getCrew(this.currentTravall.id)
+      .subscribe((data: any) => {
+        this.members = data.members.users;
+      });
   }
 
 }
