@@ -1,0 +1,167 @@
+.wrapper {
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+agm-map {
+  width: 40vw;
+  height: 65vh;
+
+}
+
+.map {
+  float: left;
+  margin-right: 5%;
+  margin-left: 4%;
+}
+
+.info {
+  margin-right: 4%;
+  white-space: pre-wrap;
+  margin-left: 67%;
+}
+
+.title {
+  font-size: 23pt;
+  font-family: "Raleway", "sans-serif";
+}
+
+.menu {
+  float: right;
+}
+
+.menubutton {
+  font-family: "Raleway", "sans-serif";
+}
+
+.menubutton:hover {
+  background-color: #349fad;
+}
+
+.ptag {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 12pt;
+}
+
+.fa-ellipsis-v{
+font-size: 18pt;
+}
+
+.all{
+  margin: auto;
+}
+
+.housingcard {
+  width: 70vw;
+  min-height: 70vh;
+  margin: auto;
+  top: 10vh;
+  /* margin-top: 4%; */
+  background-color:  #ECEDF1;
+  border-radius: 0.87em;
+}
+
+/* Ipad Pro COMPLETE */
+@media screen and (max-width: 1024px) {
+  .map {
+    height: 300px;
+  }
+  agm-map {
+    width: 65vw;
+    height: 45vh;
+  }
+
+  .info {
+    margin-left: 3%;
+    white-space: pre-wrap;
+  }
+
+  .housingcard {
+    width: 70vw;
+    min-height: 70vh;
+    margin-right: 13%;
+    margin-top: 5%;
+    margin-bottom: 14%;
+    background-color:  #ECEDF1;
+    border-radius: 0.87em;
+  }
+
+}
+
+@media screen and (max-width: 414px) {
+
+  .housingcard {
+    width: 70vw;
+    min-height: 70vh;
+    margin-right: 13%;
+    margin-top: 5%;
+    margin-bottom: 25%;
+    background-color:  #ECEDF1;
+    border-radius: 0.87em;
+  }
+}
+
+/* Pixel 2 & Pixel 2 XL & iPhone 6/7/8 & iPhone X COMPLETE */
+@media screen and (max-width: 412px) {
+  .map {
+    border: .1em solid black;
+    margin-bottom: 8%;
+    margin-left: -.5%;
+  }
+  agm-map {
+    width: 85vw;
+    height: 45vh;
+  }
+
+  .info {
+    margin-left: -2%;
+    white-space: pre-wrap;
+  }
+
+  .housingcard {
+    width: 85vw;
+    min-height: 70vh;
+    margin-left:3.5%;
+    margin-top: 5%;
+    margin-bottom: 20%;
+    background-color:  #ECEDF1;
+    border-radius: 0.87em;
+  }
+
+}
+
+/* Iphone 5/SE & Galaxy S5 */
+@media screen and (max-width: 375px) {
+  .map {
+    margin-bottom: 8%;
+    margin-left: -1%;
+  }
+  agm-map {
+    width: 85vw;
+    height: 45vh;
+  }
+
+  .info {
+    margin-left: -2%;
+    white-space: pre-wrap;
+  }
+
+  .housingcard {
+    width: 85vw;
+    min-height: 70vh;
+    margin-left: 3%;
+    margin-top: 5%;
+    margin-bottom: 25%;
+    background-color:  #ECEDF1;
+    border-radius: 0.87em;
+  }
+
+}

@@ -20,5 +20,15 @@
         <label for="endDate">Ending Date</label>
         <input type="date" formControlName="endDate" name="endDate">
     </div>
+    <agm-map
+            class="new"
+            [latitude]="startingLat"
+            [longitude]="startingLng"
+            (mapClick)="onPickedLocation($event)"
+          >
+            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+          </agm-map>
+
     <button type="submit">Submit</button>
   </form>
+

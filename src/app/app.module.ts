@@ -86,9 +86,8 @@ import { MapComponent } from './map/map.component';
     HttpClientModule,
     NgbModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCWNzQvhDrg2EITW_mt9q7FxBoTfGmkEFs'
+      apiKey: ''
     })
-
   ],
   providers: [,
         AuthGuard,
