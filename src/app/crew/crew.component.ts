@@ -12,7 +12,7 @@ export class CrewComponent implements OnInit {
   currentTravall: any = JSON.parse(sessionStorage.getItem('currentTravall')) || '';
   members: any = [];
 
-  constructor(private crewService: CrewService, private addMember: AddMemberComponent, private dialog: MatDialog) { }
+  constructor(private crewService: CrewService, private dialog: MatDialog) { }
 
   ngOnInit() {
     this.getCrew();
@@ -31,7 +31,7 @@ export class CrewComponent implements OnInit {
   }
 
   openDialog() {
-    // this.dialog.open(AddMemberComponent);
+    this.dialog.open(AddMemberComponent);
   }
 
 }

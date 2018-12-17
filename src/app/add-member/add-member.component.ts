@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 
 import { CrewService } from '../services/crew.service';
 import { MatDialog, MatDialogRef } from '@angular/material';
+import { routerNgProbeToken } from '@angular/router/src/router_module';
 
 @Component({
   selector: 'app-add-member',
@@ -13,29 +14,22 @@ import { MatDialog, MatDialogRef } from '@angular/material';
 
 export class AddMemberComponent implements OnInit {
   addMemberForm: FormGroup;
+  currentTravall: any = JSON.parse(sessionStorage.getItem('currentTravall')) || '';
 
   constructor(private formBuilder: FormBuilder, private router: Router, private matDialogRef: MatDialogRef<AddMemberComponent>, public dialog: MatDialog, private crewService: CrewService) { }
 
   ngOnInit() {
     this.addMemberForm = this.formBuilder.group({
-      email: new FormControl(),
+      "email": new FormControl(''),
     });
   }
 
-  // openDialog() {
-  //   const dialogRef = this.dialog.open(AddMemberComponent);
-  // }
-
   onSubmit() {
-    return this.matDialogRef.close();
-    this.crewService
+    console.log(this.addMemberForm.value)
+    this.crewService.addMember(this.addMemberForm.value, this.currentTravall.id);
+    this.matDialogRef.close();
+    this.router.navigate(['/travall']);
   }
 
 
 }
-
-// @Component({
-//   selector: 'add-member-dialog',
-//   templateUrl: 'add-member-dialog.html',
-// })
-// export class AddMemberComponentDialog {}

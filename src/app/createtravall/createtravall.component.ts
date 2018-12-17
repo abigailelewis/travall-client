@@ -10,12 +10,11 @@ import { Router } from '@angular/router';
 })
 export class CreatetravallComponent implements OnInit {
   createTravallForm: FormGroup;
-  user: any;
+  user: any = this.user = JSON.parse(sessionStorage.getItem('currentUser'));
 
   constructor(private formBuilder: FormBuilder, private travallService: TravallService, private router: Router) { }
 
   ngOnInit() {
-    this.user = JSON.parse(sessionStorage.getItem('currentUser'));
     this.createTravallForm = this.formBuilder.group({
       title: new FormControl(),
       location: new FormControl(),

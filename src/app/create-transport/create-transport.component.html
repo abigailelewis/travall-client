@@ -1,0 +1,34 @@
+<h4>Add Transportation</h4>
+<form [formGroup]="createTransportForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="dOrA">Arrival or Departure?</label>
+    <select class="form-control" id="sel1" style="width:auto;" formControlName="dOrA" name="dOrA">
+      <option>Arrival</option>
+      <option>Departure</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="type">By:</label>
+    <select class="form-control" id="sel1" style="width:auto;" formControlName="type" name="type">
+      <option value="Flight">Plane</option>
+      <option value="Train">Train</option>
+      <option value="Bus">Bus</option>
+      <option value="Car">Personal Vehicle</option>
+      <option value="Boat">Boat</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="date">Date</label>
+    <input type="date" formControlName="date" name="date">
+  </div>
+  <div class="form-group">
+    <label for="upTime">Up Time</label>
+    <input type="text" formControlName="upTime" name="upTime">
+  </div>
+  <div class="form-group">
+    <label for="downTime">Down Time</label>
+    <input type="text" formControlName="downTime" name="downTime">
+  </div>
+  <button type="submit">Submit</button>
+</form>

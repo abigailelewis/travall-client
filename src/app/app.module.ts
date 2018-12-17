@@ -19,7 +19,6 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { AboutComponent } from './about/about.component';
-import { AlertComponent } from './alert/alert.component';
 import { AuthGuard } from './help/auth.guard';
 import { JwtInterceptor } from './help/jwt.interceptor';
 import { ErrorInterceptor } from './help/error.interceptor';
@@ -47,6 +46,8 @@ import { AgmCoreModule } from '@agm/core';
 import { CreatetravallComponent } from './createtravall/createtravall.component';
 import { MapComponent } from './map/map.component';
 import { AdmincontrolComponent } from './admincontrol/admincontrol.component';
+import { AlertComponent } from './alert/alert.component';
+// import { CreateTransportComponent } from './create-transport/create-transport.component';
 
 @NgModule({
   declarations: [
@@ -62,11 +63,12 @@ import { AdmincontrolComponent } from './admincontrol/admincontrol.component';
     LoginComponent,
     AdminComponent,
     AboutComponent,
-    AlertComponent,
     CreatetravallComponent,
     MapComponent,
     AdmincontrolComponent,
     AddMemberComponent,
+    AlertComponent,
+    // CreateTransportComponent,
   ],
   imports: [
     BrowserModule,
@@ -110,6 +112,9 @@ import { AdmincontrolComponent } from './admincontrol/admincontrol.component';
 
   ],
   bootstrap: [AppComponent],
+  entryComponents: [
+    AddMemberComponent,
+],
 })
 export class AppModule { }
 
