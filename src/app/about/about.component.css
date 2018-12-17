@@ -1,6 +1,7 @@
 .jumbotron {
-  height: 50em;
+  height: 40em;
   width: 60em;
   align-content: center;
-  margin-left: -10em;
+  margin-left: 5em;
+  border: 10px solid ;
 }

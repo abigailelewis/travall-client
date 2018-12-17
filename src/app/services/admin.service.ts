@@ -3,8 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 
 
-// const apiUrl = 'https://travall-server.herokuapp.com'
-const apiUrl = 'http://localhost:3000'
+ const apiUrl = 'https://travall-server.herokuapp.com'
+// const apiUrl = 'http://localhost:3000'
 
 
 @Injectable()
@@ -13,7 +13,7 @@ export class AdminService {
 
     login(username: string, password: string) {
         return this.http.post<any>(apiUrl + '/admin/login', { username, password} )
-            .pipe(map(user => {       
+            .pipe(map(user => {
                 if (user && user.sessionToken) {
                     sessionStorage.setItem('currentAdmin', JSON.stringify(user));
                 }
@@ -24,5 +24,5 @@ export class AdminService {
     logout() {
         sessionStorage.clear();
     }
-    
+
 }

@@ -1,24 +1,28 @@
+
+<div class="wrapper">
 <h4>Create a Travall</h4>
-<form [formGroup]="createTravallForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-        <label for="title">Title</label>
-        <input type="text" formControlName="title" name="title">
-    </div>
-    <div class="form-group">
-        <label for="location">Location</label>
-        <input type="text" formControlName="location" name="location">
-    </div>
-    <div class="form-group">
-        <label for="type">Type of Trip</label>
-        <input type="text" formControlName="type" name="type">
-    </div>
-    <div class="form-group">
-        <label for="startDate">Starting Date</label>
-        <input type="date" formControlName="startDate" name="startDate">
-    </div>
-    <div class="form-group">
-        <label for="endDate">Ending Date</label>
-        <input type="date" formControlName="endDate" name="endDate">
-    </div>
-    <button type="submit">Submit</button>
-  </form>
+<div class="form1">
+ <form [formGroup]="createTravallForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" formControlName="title" name="title">
+  </div>
+  <div class="form-group">
+    <label for="location">Location</label>
+    <input type="text" formControlName="location" name="location">
+  </div>
+  <div class="form-group">
+    <label for="type">Type of Trip</label>
+    <input type="text" formControlName="type" name="type">
+  </div>
+  <div class="form-group">
+    <label for="startDate">Starting Date</label>
+    <input type="date" formControlName="startDate" name="startDate">
+  </div>
+  <div class="form-group">
+    <label for="endDate">Ending Date</label>
+    <input type="date" formControlName="endDate" name="endDate">
+  </div>
+<button type="submit">Submit</button>
+</form>
+</div>

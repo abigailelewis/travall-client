@@ -14,7 +14,6 @@ import { TransportationComponent } from './transportation/transportation.compone
 import { ActivityComponent } from './activity/activity.component';
 import { HeaderComponent } from './header/header.component';
 import { TravallComponent } from './travall/travall.component';
-import { CreateComponent } from './create/create.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
@@ -58,7 +57,6 @@ import { AlertComponent } from './alert/alert.component';
     ActivityComponent,
     HeaderComponent,
     TravallComponent,
-    CreateComponent,
     SignupComponent,
     LoginComponent,
     AdminComponent,
@@ -97,9 +95,8 @@ import { AlertComponent } from './alert/alert.component';
 
 
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCWNzQvhDrg2EITW_mt9q7FxBoTfGmkEFs'
+      apiKey: ''
     })
-
   ],
   providers: [,
         AuthGuard,
