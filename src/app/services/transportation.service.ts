@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { Transport } from '../models/transport';
 
 const apiUrl = 'https://travall-server.herokuapp.com';
-// const apiUrl = 'http://localhost:3000/travall'
+// const apiUrl = 'http://localhost:3000/travall';
 @Injectable({
   providedIn: 'root'
 })

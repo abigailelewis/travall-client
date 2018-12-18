@@ -48,6 +48,7 @@ import { AdmincontrolComponent } from './admincontrol/admincontrol.component';
 import { AlertComponent } from './alert/alert.component';
 import { SplashComponent } from './splash/splash.component';
 import { CreateTransportComponent } from './create-transport/create-transport.component';
+import { CreateActivityComponent } from './create-activity/create-activity.component';
 
 // import { CreateTransportComponent } from './create-transport/create-transport.component';
 
@@ -71,6 +72,7 @@ import { CreateTransportComponent } from './create-transport/create-transport.co
     AlertComponent,
     SplashComponent,
     CreateTransportComponent,
+    CreateActivityComponent,
   ],
   imports: [
     BrowserModule,

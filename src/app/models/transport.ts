@@ -5,4 +5,5 @@ export class Transport {
     date: string;
     upTime: string; 
     downTime: string;
+    participants: string;
 }
