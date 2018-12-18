@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { ActivityService } from '@/services/activity.service';
+import { CreateActivityComponent } from '@/create-activity/create-activity.component';
 
 @Component({
   selector: 'app-activity',
@@ -6,11 +9,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./activity.component.css']
 })
 export class ActivityComponent implements OnInit {
+  currentTravall: any = JSON.parse(sessionStorage.getItem('currentTravall')) || '';
+  activities: any = [];
 
-
-  constructor() { }
+  constructor(
+    private activityService: ActivityService,
+    private dialog: MatDialog
+  ) { }
 
   ngOnInit() {
+    this.getActivities();
+  }
+
+  getActivities() {
+    this.activities = [];
+    if (this.currentTravall != '') {
+      this.activityService.getActivities(this.currentTravall.id)
+        .subscribe((data: any) => {
+          this.activities = data;
+        });
+    }
+  }
+
+  openDialog() {
+    this.dialog.open(CreateActivityComponent);
   }
 
 }
