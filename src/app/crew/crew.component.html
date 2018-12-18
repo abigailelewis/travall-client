@@ -6,18 +6,37 @@
   -->
  
   <!-- </mat-card> -->
-  
- <h1>Your Crew</h1>
-  <div *ngFor="let member of members">
-   
-      <mat-card > 
-      <mat-card-title> {{member.username}} </mat-card-title>
-        <mat-divider></mat-divider>
-        <mat-divider></mat-divider>
-      </mat-card> 
+
+  <!-- <div class="body">
+      <h1 class="card-header col-sm bg-light border-success">Let the spirits guide you to the right Plant! </h1>
+      <div class="row">
+        <div class="card border-success col-sm-3 mt-3 rounded bg-light " *ngFor="let product of products">
+          <div *ngIf="token !== null || undefined">
+            <button (click)="delete(product.id)" style="float: right; width: 24px; text-align: center;">x</button>
+          </div>
+          <div class="card-body text-success">
+            <h1 class="card-header bg-transparent border-success">{{product.product_name}}</h1>
+            <p class="card-text">{{product.product_description}}</p>
+            <h3 class="card-footer bg-transparent border-success">${{product.product_price}}</h3>
+          </div>
+        </div>
       </div>
-      <button mat-button (click)="openDialog()">Add Member
+    </div> -->
+  <div class="container">
+ <h1>Your Crew</h1>
+  <div class="card border-primary col-sm-3 mt-3 rounded bg-light " *ngFor="let member of members">
+      <button (click)="deleteMember(member.id)" style="float: right; width: 24px; text-align: center;">x</button>
+    
+    <div class="card-body">
+        <h1 class="card-header bg-transparent border-primary" id="border-primary">{{member.username}}</h1>
+        <p class="card-text">{{member.email}}</p>
+  </div>
+</div>
+      
+      
+      <button class="navButton" mat-raised-button="accent" (click)="openDialog()">Add Member
         </button>
+      </div>
     
  
   <!-- <ul>Crew Members</ul>
@@ -25,3 +44,8 @@
   <button mat-button (click)="openDialog()">Add Member
   </button>
 </div> -->
+<!-- <mat-card > 
+    <mat-card-title> {{member.username}} </mat-card-title>
+      <mat-divider></mat-divider>
+      <mat-divider></mat-divider>
+    </mat-card>  -->
