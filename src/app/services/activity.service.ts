@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Activity } from '../models/activity';
+import { tap } from 'rxjs/operators';
 
 const apiUrl = 'https://travall-server.herokuapp.com';
 // const apiUrl = 'http://localhost:3000/travall';
@@ -24,5 +25,12 @@ export class ActivityService {
         location.reload();
       });
   }
+  deleteActivity(activityid: any): Observable<any> {
+    
+    return this.http.delete<any>(`${apiUrl}/activity/delete/${activityid}`).pipe(
+    tap(_ => console.log(`deletedactivity id=${activityid}`)),
+   
+  );
   
 }
+};

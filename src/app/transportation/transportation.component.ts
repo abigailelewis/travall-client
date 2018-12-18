@@ -30,12 +30,22 @@ export class TransportationComponent implements OnInit {
       this.transportService.getTransports(this.currentTravall.id)
         .subscribe((data: any) => {
           this.transports = data;
+          console.log(data);
         });
     }
   }
 
   openDialog() {
     this.dialog.open(CreateTransportComponent);
+  }
+  deleteTransport(transportid: Transport) {
+    this.transportService.deleteTransport(transportid)
+      .subscribe(res => {
+        this.getTransports();
+      }, (err) => {
+        console.log(err);
+      }
+      );
   }
 
 }

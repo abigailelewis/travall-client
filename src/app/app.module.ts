@@ -120,6 +120,7 @@ import { CreateActivityComponent } from './create-activity/create-activity.compo
     AddMemberComponent,
     CreatetravallComponent,
     CreateTransportComponent,
+    CreateActivityComponent,
 ],
 })
 export class AppModule { }

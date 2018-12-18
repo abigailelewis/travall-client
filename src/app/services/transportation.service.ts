@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Transport } from '../models/transport';
+import { tap } from 'rxjs/operators';
 
 const apiUrl = 'https://travall-server.herokuapp.com';
 // const apiUrl = 'http://localhost:3000/travall';
@@ -10,6 +11,7 @@ const apiUrl = 'https://travall-server.herokuapp.com';
   providedIn: 'root'
 })
 export class TransportationService {
+  currentTravall: any = JSON.parse(sessionStorage.getItem('currentTravall')) || '';
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -24,5 +26,12 @@ export class TransportationService {
         location.reload();
       });
   }
+  deleteTransport(transportid: any): Observable<any> {
+    
+    return this.http.delete<any>(`${apiUrl}/transport/delete/${transportid}`).pipe(
+    tap(_ => console.log(`deleted transport id=${transportid}`)),
+   
+  );
+}
 
 }

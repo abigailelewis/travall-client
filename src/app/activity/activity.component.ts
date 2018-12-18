@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { ActivityService } from '@/services/activity.service';
 import { CreateActivityComponent } from '@/create-activity/create-activity.component';
-
+import { HttpClient } from '@angular/common/http';
+import { Activity } from '../models/activity';
 @Component({
   selector: 'app-activity',
   templateUrl: './activity.component.html',
@@ -14,7 +15,8 @@ export class ActivityComponent implements OnInit {
 
   constructor(
     private activityService: ActivityService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private http: HttpClient
   ) { }
 
   ngOnInit() {
@@ -33,6 +35,16 @@ export class ActivityComponent implements OnInit {
 
   openDialog() {
     this.dialog.open(CreateActivityComponent);
+  }
+
+  deleteActivity(activityid: Activity) {
+    this.activityService.deleteActivity(activityid)
+      .subscribe(res => {
+        this.getActivities();
+      }, (err) => {
+        console.log(err);
+      }
+      );
   }
 
 }
