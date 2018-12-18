@@ -15,6 +15,7 @@
   padding-top: .4em;
   align-content: center;
   border-radius: 5px;
+  color: black;
 }
 
 ul {
@@ -22,7 +23,7 @@ ul {
 }
 
 .navButton {
-  margin-left: .5em;
+  margin-left: .6em;
 }
 
 .navlink {

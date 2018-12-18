@@ -1,27 +1,71 @@
-# TravallClient
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Table of Contents
+0. [About](## About )
+1. [Motivation](## Motivation)
+2. [Tech/framework](## Tech/framework)
+3. [Functionality](## Functionality)
+4. [Installation](## Installation)
+5. [Credits](## Credits)
+6. [Contact](## Contact)
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## About
 
-## Build
+Travall is a collaborative application where you can help stay organized with other about your upcoming travel plans.  Creating a Travall will allow you to others to your upcoming trip as well as display your transportation details and any/all activities you would like to do while on the trip.  Travall will keep you and your friends/family organized and informed about your next upcoming travall plans.  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Motivation
+Travall was created to have one centralized location to plan a trips with loved ones that you do not get to see every day.  Life is busy and by logging into the Travall app,  you are instantly informed about who is coming, when they are coming, and what they would like to do once they arrive. Upgrades/ new features will continue to be added to better help stay organized and informed about upcoming plans with one other person or a great many others.
 
-## Running unit tests
+## Tech/framework used
+<b>Built with</b>
+- [HTML]( https://developer.mozilla.org/en-US/docs/Learn/HTML)
+- [SCSS]( https://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html)
+- [CSS]( https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS)
+- [Bootstrap](https://getbootstrap.com/)
+- [Angular](https://angular.io/)
+- [Angular Material]( https://material.angular.io/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Functionality
+**General functionality:**
+- Authenticate users via JWT (login/register pages + logout button in nav to remove)
+- Authenticated admin with JWT (login + logout button in nav to remove)
+- Guards on protected routes(authguard/ adminguard)
+- Routes utilized in nav
+- Delete - (Admin) – Admin Portal – Delete functionality for any user/ travall
+- Create, Read – (User) – Add Travall – Create functionality for any signed in user to create a Travall and begin utilizing more functionality
+- Create, Read, Delete – (User) – Add Member – CRD functionality to add a current user of Travall to your crew members
+- Create, Read, Update, Delete – (User) – Add Transportation/ Add Activity – CRUD functionality for any signed in user to add items to the transportation or activity components
+- Read – Any – About section to learn more about Travall
+- Utilized DB Associations to allow users to do CRUD on different travalls and each contain different data and store it appropriately in the DB and call it appropriately on the front-end.
+- Connected to 3rd party API – google maps rendering on Travall page to checkout the area you will be visiting
 
-## Further help
+## Installation
+A step by step process to get started
+Clone repo
+```
+git clone (link)
+```
+Install `npm` packages
+```
+npm install
+```
+Start client 
+```
+ng serve -o
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Credits
+@comellen
+@abigailelewis
+@j2134
+
+## Contact
+### Product Change request?
+### Report a problem or bug?
+Email the team at abigailelewis57@gmail.com. Thank you.
+
+
