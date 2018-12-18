@@ -23,6 +23,7 @@ export class CrewService {
     return this.http.post(`${apiUrl}/travall/adduser/${travallid}`, email)
       .subscribe(response => {
         this.router.navigate(['/travall']);
+        location.reload();
       })
   }
 }
