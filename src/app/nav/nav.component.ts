@@ -39,12 +39,18 @@ export class NavComponent implements OnInit {
   }
 
   openDialog() {
-    this.dialog.open(CreatetravallComponent);
+    if (this.currentUser == '') {
+      this.router.navigate(['/login']);
+    } else {
+      this.dialog.open(CreatetravallComponent);
+      location.reload();
+    }
   }
 
   logout() {
     this.authService.logout();
     this.router.navigate(['/login']);
+    location.reload();
   }
 
 }
