@@ -13,7 +13,7 @@
   <div *ngFor="let t of travall">
    
       <mat-card >{{t.title}}     <button style="float: right; width: 24px; text-align: center; color: red;"  class="delete" title="delete travall"
-        (click)="delete(t.id)">x</button></mat-card> 
+        (click)="deleteTravall(t.id)">x</button></mat-card> 
         <mat-divider></mat-divider>
       </div>
 

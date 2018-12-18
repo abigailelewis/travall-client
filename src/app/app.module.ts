@@ -46,6 +46,7 @@ import { CreatetravallComponent } from './createtravall/createtravall.component'
 import { MapComponent } from './map/map.component';
 import { AdmincontrolComponent } from './admincontrol/admincontrol.component';
 import { AlertComponent } from './alert/alert.component';
+import { SplashComponent } from './splash/splash.component';
 // import { CreateTransportComponent } from './create-transport/create-transport.component';
 
 @NgModule({
@@ -66,6 +67,7 @@ import { AlertComponent } from './alert/alert.component';
     AdmincontrolComponent,
     AddMemberComponent,
     AlertComponent,
+    SplashComponent,
     // CreateTransportComponent,
   ],
   imports: [
@@ -112,6 +114,7 @@ import { AlertComponent } from './alert/alert.component';
   bootstrap: [AppComponent],
   entryComponents: [
     AddMemberComponent,
+    CreatetravallComponent,
 ],
 })
 export class AppModule { }

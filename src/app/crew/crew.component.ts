@@ -1,7 +1,7 @@
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CrewService } from '@/services/crew.service';
 import { AddMemberComponent } from '../add-member/add-member.component';
-import { MatDialog, MatDialogRef } from '@angular/material';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-crew',

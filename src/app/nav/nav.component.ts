@@ -2,8 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 import { TravallService } from '../services/travall.service';
+
 import { User } from '../models/user';
 import {MatMenuModule} from '@angular/material/menu'
+
+import { CreatetravallComponent } from '@/createtravall/createtravall.component';
+import { MatDialog } from '@angular/material';
+
 
 
 @Component({
@@ -18,13 +23,8 @@ export class NavComponent implements OnInit {
   travalls: any = [];
 
 
+  constructor(private router: Router, private authService: AuthService, private travallService: TravallService, private dialog: MatDialog) { }
 
-  constructor(private router: Router, private authService: AuthService, private travallService: TravallService) { }
-
-  logout() {
-    this.authService.logout();
-    this.router.navigate(['/login']);
-  }
 
   ngOnInit() {
     this.getTravalls();
@@ -35,8 +35,8 @@ export class NavComponent implements OnInit {
     if (this.currentUser != '') {
       this.travallService.getTravalls(this.currentUser.user)
         .subscribe((data: any) => {
-        return this.travalls = data;
-      });
+          return this.travalls = data;
+        });
     } else {
       return
     }
@@ -47,6 +47,21 @@ export class NavComponent implements OnInit {
     this.router.navigate(['/travall']);
   }
 
-}
 
+  openDialog() {
+    if (this.currentUser == '') {
+      this.router.navigate(['/login']);
+    } else {
+      this.dialog.open(CreatetravallComponent);
+      location.reload();
+    }
+  }
+
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/login']);
+    location.reload();
+  }
+
+}
 

@@ -79,7 +79,7 @@ delete(user: User): void {
 }
 
 deleteTravall(travall: Travall): void {
-  // this.users = this.users.filter(u => u !== user);
+
   this.admincontrolService.deleteTravall(travall).subscribe(
     res => {
               this.getAlltravall();

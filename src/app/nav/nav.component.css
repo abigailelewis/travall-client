@@ -19,6 +19,7 @@ ul {
 }
 
 
+
 .navlink {
   margin-right: 10px;
   background-color: #ecedf1;
@@ -29,3 +30,11 @@ ul {
   font-size: 12pt;
   font-family: "Raleway", "sans-serif";
 }
+
+#addTravallButton {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: .3em;
+  font-size: 1em;
+}
+
