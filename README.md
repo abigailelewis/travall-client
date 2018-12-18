@@ -1,51 +1,22 @@
-<!-- # TravallClient
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md). -->
 
 # Table of Contents
-0. [About Travall](##AboutTravall App)
-1. [Motivation](##Motivation)
-2. [ScreenShots](##ScreenShots)
-3. [Tech/framework used]( ##Tech/framework used)
-4. [Functionality]( ##Functionality)
-5. [Installation](##Installation)
-6. [Credits]( ##Credits)
-7. [Contact]( ##Contact)
+0. [About](## About )
+1. [Motivation](## Motivation)
+2. [Tech/framework](## Tech/framework)
+3. [Functionality](## Functionality)
+4. [Installation](## Installation)
+5. [Credits](## Credits)
+6. [Contact](## Contact)
 
 
-##About Travall App
+## About
 Travall is a collaborative application where you can help stay organized with other about your upcoming travel plans.  Creating a Travall will allow you to others to your upcoming trip as well as display your transportation details and any/all activities you would like to do while on the trip.  Travall will keep you and your friends/family organized and informed about your next upcoming travall plans.  
 
-##Motivation
+## Motivation
 Travall was created to have one centralized location to plan a trips with loved ones that you do not get to see every day.  Life is busy and by logging into the Travall app,  you are instantly informed about who is coming, when they are coming, and what they would like to do once they arrive. Upgrades/ new features will continue to be added to better help stay organized and informed about upcoming plans with one other person or a great many others.
 
-##ScreenShots
-
-##Tech/framework used
+## Tech/framework used
 <b>Built with</b>
 -[HTML]( https://developer.mozilla.org/en-US/docs/Learn/HTML)
 -[SCSS]( https://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html)
@@ -56,7 +27,7 @@ Travall was created to have one centralized location to plan a trips with loved 
 
 
 
-##Functionality
+## Functionality
 **General functionality:**
 - Authenticate users via JWT (login/register pages + logout button in nav to remove)
 -Authenticated admin with JWT (login + logout button in nav to remove)
@@ -70,17 +41,13 @@ Travall was created to have one centralized location to plan a trips with loved 
 -Utilized DB Associations to allow users to do CRUD on different travalls and each contain different data and store it appropriately in the DB and call it appropriately on the front-end.
 -Connected to 3rd party API – google maps rendering on Travall page to checkout the area you will be visiting
 
-##Installation
+## Installation
 A step by step process to get started
-
 Clone repo
-
 ```
 git clone (link)
 ```
-
 Install `npm` packages
-
 ```
 npm install
 ```
