@@ -2,14 +2,14 @@
 <form [formGroup]="createTransportForm" (ngSubmit)="onSubmit()">
   <div class="form-group">
     <label for="dOrA">Arrival or Departure?</label>
-    <select class="form-control" id="sel1" style="width:auto;" formControlName="dOrA" name="dOrA">
+    <select class="form-control" style="width:auto;" formControlName="dOrA" name="dOrA">
       <option>Arrival</option>
       <option>Departure</option>
     </select>
   </div>
   <div class="form-group">
     <label for="type">By</label>
-    <select class="form-control" id="sel1" style="width:auto;" formControlName="type" name="type">
+    <select class="form-control" style="width:auto;" formControlName="type" name="type">
       <option value="Flight">Plane</option>
       <option value="Train">Train</option>
       <option value="Bus">Bus</option>
@@ -32,6 +32,11 @@
     <label for="downTime">Down Time</label>
     <br>
     <input type="text" formControlName="downTime" name="downTime">
+  </div>
+  <div class="form-group">
+    <label for="participants">Participants</label>
+    <br>
+    <input type="text" formControlName="participants" name="participants">
   </div>
   <button type="submit">Submit</button>
 </form>
