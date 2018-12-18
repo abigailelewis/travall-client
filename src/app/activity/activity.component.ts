@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivityComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit() {

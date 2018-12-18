@@ -1,7 +1,14 @@
-
 import { Component, OnInit } from '@angular/core';
-import { AuthService} from '../services/auth.service';
+import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
+import { TravallService } from '../services/travall.service';
+
+import { User } from '../models/user';
+import {MatMenuModule} from '@angular/material/menu'
+
+import { CreatetravallComponent } from '@/createtravall/createtravall.component';
+import { MatDialog } from '@angular/material';
+
 
 
 @Component({
@@ -9,48 +16,52 @@ import { Router } from '@angular/router';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css']
 })
+
 export class NavComponent implements OnInit {
 
-  constructor(
-    private router: Router,
-    private authService: AuthService
-  ) {}
-  logout() {
+  currentUser: any = JSON.parse(sessionStorage.getItem('currentUser')) || '';
+  travalls: any = [];
 
-    this.authService.logout();
-    this.router.navigate(['/login']);
-}
+
+  constructor(private router: Router, private authService: AuthService, private travallService: TravallService, private dialog: MatDialog) { }
+
 
   ngOnInit() {
+    this.getTravalls();
+  }
+
+  getTravalls() {
+    this.travalls = [];
+    if (this.currentUser != '') {
+      this.travallService.getTravalls(this.currentUser.user)
+        .subscribe((data: any) => {
+          return this.travalls = data;
+        });
+    } else {
+      return
+    }
+  }
+
+  setCurrentTravall(travall: any) {
+    sessionStorage.setItem('currentTravall', JSON.stringify(travall));
+    this.router.navigate(['/travall']);
+    location.reload();
+  }
+
+
+  openDialog() {
+    if (this.currentUser == '') {
+      this.router.navigate(['/login']);
+    } else {
+      this.dialog.open(CreatetravallComponent);
+    }
+  }
+
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/login']);
+    location.reload();
   }
 
 }
 
-
-// import { Component, OnInit } from '@angular/core';
-// import { Subscription } from 'rxjs';
-// import { ActivatedRoute, Router } from '@angular/router';
-// import { User } from '../models/user';
-// import { UserService } from '../services/user.service';
-// import { AuthService } from '../services/auth.service';
-
-// @Component({
-//   selector: 'app-nav',
-//   templateUrl: './nav.component.html',
-//   styleUrls: ['./nav.component.css']
-// })
-// export class NavComponent implements OnInit {
-//   currentUser: User;
-//     currentUserSubscription: Subscription;
-
-//   constructor(private userService: UserService, private authService: AuthService,) {
-//     this.currentUserSubscription = this.authService.currentUser.subscribe(user => {
-//         this.currentUser = user;
-//     });
-// }
-
-
-//   ngOnInit() {
-//   }
-
-// }

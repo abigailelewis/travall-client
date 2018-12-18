@@ -15,6 +15,7 @@ export class SignupComponent implements OnInit {
     loading = false;
     submitted = false;
     returnUrl: string;
+    keepAfterNavigationChange = false;
 
     constructor(
         private formBuilder: FormBuilder,
@@ -24,9 +25,7 @@ export class SignupComponent implements OnInit {
         private authService: AuthService,
         private alertService: AlertService) { 
 
-            // if (this.authService.currentUserValue) { 
-            //     this.router.navigate(['/']);
-            // } 
+           
         }
 
     ngOnInit() {
@@ -37,49 +36,16 @@ export class SignupComponent implements OnInit {
             color: ['', Validators.required],
         });
 
-//  // reset login status
-//  this.authService.logout();
 
-//  // get return url from route parameters or default to '/'
-//  this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/about';
 }
 
     
-// // convenience getter for easy access to form fields
-// get f() { return this.registerForm.controls; }
-
-// onSubmit() {
-//     this.submitted = true;
-
-//     // stop here if form is invalid
-//     if (this.registerForm.invalid) {
-//         return;
-//     }
-
-//     this.loading = true;
-//     this.authService.signup(this.f.email.value, this.f.username.value, this.f.password.value, this.f.color.value)
-//         .pipe(first())
-//         .subscribe(
-//             data => {
-//                 this.router.navigate([this.returnUrl]);
-//             },
-//             error => {
-//                 this.alertService.error(error);
-//                 this.loading = false;
-//             });
-// }
-// }
-
-
-
-
-    // convenience getter for easy access to form fields
     get f() { return this.registerForm.controls; }
 
     onSubmit() {
         this.submitted = true;
-
-        // stop here if form is invalid
+        this.keepAfterNavigationChange = false;
+     
         if (this.registerForm.invalid) {
             return;
         }
@@ -89,7 +55,8 @@ export class SignupComponent implements OnInit {
             .pipe(first())
             .subscribe(
                 data => {
-                    this.alertService.success('Registration successful', true);
+                    this.alertService.success('Registration successful', false);
+                    
                     this.router.navigate(['/login']);
                 },
                 error => {

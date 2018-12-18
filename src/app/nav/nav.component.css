@@ -1,0 +1,46 @@
+.fill-remaining {
+  flex: 1 1 auto;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  /* background-color: #f9f9f9; */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  color: black;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+  padding-top: .4em;
+  align-content: center;
+  border-radius: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.navButton {
+  margin-left: .5em;
+}
+
+.navlink {
+  margin-right: 10px;
+  background-color: #ecedf1;
+  /* border-top: #4d2110 1px solid; */
+  border-bottom: rgb(228, 228, 228) 1px solid;
+  color: black;
+  height: 50px;
+  font-size: 12pt;
+  font-family: "Raleway", "sans-serif";
+}
+
+#addTravallButton {
+  margin-top: .3em;
+  font-size: 1em;
+}
+
+#travallMenuTitle {
+  font-size: 1.5em;
+}

@@ -26,13 +26,14 @@ import { User } from './models/user';
 
 @Component({ selector: 'app', templateUrl: 'app.component.html' })
 export class AppComponent {
-    currentUser: User;
+    currentUser: any = JSON.parse(sessionStorage.getItem('currentUser')) || '';
+    currentAdmin: any = JSON.parse(sessionStorage.getItem('currentAdmin')) || '';
 
     constructor(
         private router: Router,
         private authService: AuthService
     ) {
-        // this.authService.currentUser.subscribe(x => this.currentUser = x);
+        
     }
 
 

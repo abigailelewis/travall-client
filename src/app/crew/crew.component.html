@@ -1,4 +1,27 @@
-<div>
-    <ul>Crew Members</ul>
-    <li *ngFor="let member of members"><span>{{member.username}}</span></li>
-  </div>
+<!-- <div>
+  <mat-card *ngFor="let member of members">
+   
+    <mat-card-title>{{member.username}}</mat-card-title>
+    <mat-card-subtitle>{{member.email}}</mat-card-subtitle>
+  -->
+
+<!-- </mat-card> -->
+
+<h1>Your Crew</h1>
+<div *ngFor="let member of members">
+
+  <mat-card>
+    <mat-card-title> {{member.username}} </mat-card-title>
+    <mat-divider></mat-divider>
+    <mat-divider></mat-divider>
+  </mat-card>
+  
+</div>
+<button mat-button (click)="openDialog()">Add Member</button>
+
+
+<!-- <ul>Crew Members</ul>
+  <li *ngFor="let member of members"><span>{{member.username}}</span></li>
+  <button mat-button (click)="openDialog()">Add Member
+  </button>
+</div> -->

@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule  }    from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { routing} from './app-routing.module';
+import { routing } from './app-routing.module';
 import { Routes, RouterModule } from '@angular/router';
-
+import { Observable } from 'rxjs'
 
 // import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,31 +14,42 @@ import { TransportationComponent } from './transportation/transportation.compone
 import { ActivityComponent } from './activity/activity.component';
 import { HeaderComponent } from './header/header.component';
 import { TravallComponent } from './travall/travall.component';
-// import { CreateComponent } from './create/create.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
-import { AuthComponent } from './auth/auth.component';
+import { AdminComponent } from './admin/admin.component';
 import { AboutComponent } from './about/about.component';
-import { AlertComponent } from './alert/alert.component';
 import { AuthGuard } from './help/auth.guard';
 import { JwtInterceptor } from './help/jwt.interceptor';
 import { ErrorInterceptor } from './help/error.interceptor';
-import { AlertService  } from './services/alert.service';
-import {  AuthService } from './services/auth.service';
+import { AlertService } from './services/alert.service';
+import { AuthService } from './services/auth.service';
+import { AdminService } from './services/admin.service';
 import {  UserService } from './services/user.service';
+import { AdmincontrolService } from './services/admincontrol.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatSelectModule} from '@angular/material/select';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSelectModule } from '@angular/material/select';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
-import { MatCardModule } from '@angular/material';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
-import { MatMenuModule} from '@angular/material/menu';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AddMemberComponent } from './add-member/add-member.component';
+// import { MatDialog, MatDialogRef } from '@angular/material';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatCardModule, MatCard, MatCardTitle } from '@angular/material/card';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { AgmCoreModule } from '@agm/core';
+import { CreatetravallComponent } from './createtravall/createtravall.component';
+import { MapComponent } from './map/map.component';
+import { AdmincontrolComponent } from './admincontrol/admincontrol.component';
+import { AlertComponent } from './alert/alert.component';
+import { SplashComponent } from './splash/splash.component';
+import { CreateTransportComponent } from './create-transport/create-transport.component';
+
+// import { CreateTransportComponent } from './create-transport/create-transport.component';
 
 @NgModule({
   declarations: [
@@ -49,13 +60,17 @@ import { AgmCoreModule } from '@agm/core';
     ActivityComponent,
     HeaderComponent,
     TravallComponent,
-    // CreateComponent,
     SignupComponent,
     LoginComponent,
-    AuthComponent,
+    AdminComponent,
     AboutComponent,
+    CreatetravallComponent,
+    MapComponent,
+    AdmincontrolComponent,
+    AddMemberComponent,
     AlertComponent,
-    
+    SplashComponent,
+    CreateTransportComponent,
   ],
   imports: [
     BrowserModule,
@@ -77,29 +92,33 @@ import { AgmCoreModule } from '@agm/core';
     MatMenuModule,
     CommonModule,
     FormsModule,
-    HttpClientModule,
+    NgbModule,
+    // MatDialog,
+    // MatDialogRef,
+    MatDialogModule,
+
+
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCWNzQvhDrg2EITW_mt9q7FxBoTfGmkEFs'
+      apiKey: ''
     })
-    // RouterModule.forRoot([
-    //   { 
-    //     path: '',
-    //     component: AboutComponent,
-    //     canActivate: [AuthGuard],	
-    //   }
-    //   ])
-    
   ],
   providers: [,
         AuthGuard,
         AlertService,
         AuthService,
         UserService,
+        AdminService,
+        AdmincontrolService,
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-      
+
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    AddMemberComponent,
+    CreatetravallComponent,
+    CreateTransportComponent,
+],
 })
 export class AppModule { }
 

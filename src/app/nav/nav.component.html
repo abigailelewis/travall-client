@@ -1,8 +1,20 @@
-<nav class="navbar navbar-expand navbar-dark bg-dark" >
-  <div class="navbar-nav">
-      <a class="nav-item nav-link" routerLink="/about">About</a>
-      <a class="nav-item nav-link" (click)="logout()" >Logout </a>
+<mat-toolbar color="primary" class="toolbar">
+  <div class="dropdown">
+    <button mat-icon-button routerLink="/travall" [matMenuTriggerFor]="menu">
+      <i class="material-icons">airplanemode_active</i><span id="travallMenuTitle">Travall</span>
+    </button>
+    <div class="dropdown-content">
+      <button id="addTravallButton" mat-button color="primary" (click)="openDialog()">Add a Travall</button>
+      <ul id="dropdown-travalls">
+        <li *ngFor="let travall of travalls">
+          <a (click)="setCurrentTravall(travall)" routerLink="/travall">{{travall.title}}</a>
+        </li>
+      </ul>
+    </div>
   </div>
-</nav>
-
-<!-- *ngIf = "currentUser" -->
+  <span class="fill-remaining"></span>
+  <button class="navButton" mat-raised-button="accent" routerLink="/admin">Admin</button>
+  <button class="navButton" mat-raised-button="accent" routerLink="/login">Login</button>
+  <button class="navButton" mat-raised-button="accent" routerLink="/about">About</button>
+  <a class="nav-item nav-link" (click)="logout()">Logout</a>
+</mat-toolbar>
