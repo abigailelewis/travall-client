@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material';
 import { TransportationService } from '@/services/transportation.service';
 import { CreateTransportComponent } from '../create-transport/create-transport.component';
 import { Transport } from '../models/transport';
-import { HttpClient } from '@angular/common/http';
+import { UpdateTransportComponent } from '@/update-transport/update-transport.component';
 
 @Component({
   selector: 'app-transportation',
@@ -17,7 +17,6 @@ export class TransportationComponent implements OnInit {
   constructor(
     private transportService: TransportationService,
     private dialog: MatDialog,
-    private http: HttpClient
   ) { }
 
   ngOnInit() {
@@ -26,11 +25,10 @@ export class TransportationComponent implements OnInit {
 
   getTransports() {
     this.transports = [];
-    if (this.currentTravall != '') {
+    if (this.currentTravall !== '') {
       this.transportService.getTransports(this.currentTravall.id)
         .subscribe((data: any) => {
           this.transports = data;
-          console.log(data);
         });
     }
   }
@@ -38,11 +36,18 @@ export class TransportationComponent implements OnInit {
   openDialog() {
     this.dialog.open(CreateTransportComponent);
   }
+
+  openTransportUpdate(transportid) {
+    this.dialog.open(UpdateTransportComponent, {
+      data: transportid
+    });
+  }
+
   deleteTransport(transportid: Transport) {
     this.transportService.deleteTransport(transportid)
-      .subscribe(res => {
+      .subscribe(() => {
         this.getTransports();
-      }, (err) => {
+      }, err => {
         console.log(err);
       }
       );
