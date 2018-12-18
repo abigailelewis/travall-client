@@ -20,13 +20,14 @@
 
 }
 .card {
-    margin: 5px;
+    margin: .2em;
   
     }
   
     .row {
       margin-top: 20px;
       margin-left: 250px;
+      /* margin: auto; */
     }
   
    

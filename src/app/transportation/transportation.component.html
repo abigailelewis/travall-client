@@ -1,1 +1,36 @@
-<button mat-button (click)="openDialog()">Add Transportation</button>
+<!-- <div class="container">
+    <div class="row">
+        <div class="card" *ngFor="let transport of transports">
+<div class="class-body">
+    <p class="card-text">{{transport.type}}</p>
+</div>
+
+        </div>
+    </div>
+</div> -->
+<div class="container">
+
+        <h1>Transportation Schedule</h1>
+<table class="table" size="sm">
+<thead>
+<tr>
+      
+        <th>Date</th>
+        <th>Departure or Arrival</th>
+        <th>type</th>
+        <th>Time Up</th>
+        <th>Time Down</th>
+        <th><button mat-button (click)="openDialog()">Add Transportation</button></th>
+  
+  
+      </tr>
+    </thead>
+      <tbody *ngFor="let transport of transports">
+        <td>{{transport.date}}</td>
+        <td>{{transport.dOrA}}</td>
+        <td>{{transport.type}}</td>
+        <td>{{transport.upTime}}</td>
+        <td>{{transport.downTime}}</td>
+      </tbody>
+    </table>
+</div>
