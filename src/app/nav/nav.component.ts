@@ -3,6 +3,7 @@ import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 import { TravallService } from '../services/travall.service';
 import { User } from '../models/user';
+import {MatMenuModule} from '@angular/material/menu'
 
 
 @Component({
@@ -10,9 +11,13 @@ import { User } from '../models/user';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css']
 })
+
 export class NavComponent implements OnInit {
+
   currentUser: any = JSON.parse(sessionStorage.getItem('currentUser')) || '';
   travalls: any = [];
+
+
 
   constructor(private router: Router, private authService: AuthService, private travallService: TravallService) { }
 
@@ -43,3 +48,5 @@ export class NavComponent implements OnInit {
   }
 
 }
+
+

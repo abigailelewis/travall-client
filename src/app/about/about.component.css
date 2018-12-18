@@ -1,7 +1,19 @@
-.jumbotron {
+.wrapper {
   height: 40em;
-  width: 60em;
+  width: 120.5em;
   align-content: center;
-  margin-left: 5em;
+  margin-left: -26.5em;
   border: 10px solid ;
+}
+
+.carousel {
+  object-fit:cover;
+}
+
+h1 {
+  margin-bottom: 10em;
+}
+
+p {
+  margin-bottom: 15em;
 }
