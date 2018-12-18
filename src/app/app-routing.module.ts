@@ -10,6 +10,7 @@ import { AdminComponent } from './admin/admin.component';
 import { AdmincontrolComponent} from './admincontrol/admincontrol.component';
 
 const appRoutes: Routes = [
+    { path: '', redirectTo: '/about', pathMatch: 'full'},
     { path: '*', redirectTo: '/about'},
     { path: 'about', component: AboutComponent, data: {title: 'About'}},
     { path: 'login', component: LoginComponent,  data: {title: 'Login'} },

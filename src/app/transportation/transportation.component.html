@@ -1,6 +1,6 @@
 <div class="container">
-    <button class="navButton" mat-raised-button="accent" (click)="openDialog()" style="float: right"> Add
-        Transportation</button>
+    <button class="navButton" mat-fab="accent" (click)="openDialog()" style="float: right; font-size: 2em;">+</button>
+    <br>
     <h1>Transportation Schedule</h1>
     <table class="table" size="sm">
         <thead>
@@ -21,8 +21,8 @@
             <td>{{transport.upTime}}</td>
             <td>{{transport.downTime}}</td>
             <td>{{transport.type}}</td>
-            <td> <button (click)="deleteTransport(transport.id)" style="float: right; width: 2em; text-align: center; ">x</button></td>
-            <td> <button (click)="openTransportUpdate(transport.id)" style="float: right; width: 2em; text-align: center; ">update</button></td>
+            <td><button mat-button (click)="openTransportUpdate(transport.id)" style="float: right; width: 2em; text-align: center; ">update</button></td>
+            <td><button mat-button (click)="deleteActivity(activity.id)" style="float: right; width: 1em; text-align: center; color: maroon; font-weight: bolder">X</button></td>
         </tbody>
     </table>
 </div>

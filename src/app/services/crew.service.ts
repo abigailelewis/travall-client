@@ -28,10 +28,9 @@ export class CrewService {
   }
 
   deleteMember(userid: any): Observable<any> {
-
     return this.http.delete<any>(`${apiUrl}/travall/dropuser/${this.currentTravall.id}/${userid}`).pipe(
-      tap(_ => console.log(`deleted user id=${userid}`)),
-
+      tap(_ => console.log(`deleted user id=${userid}`))
     );
   }
+  
 }

@@ -1,18 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { User } from '../models/user';
 import { Observable, of } from 'rxjs';
-import { map, catchError, tap } from 'rxjs/operators';
+import { tap } from 'rxjs/operators';
 import { Travall } from '../models/travall';
 
 const apiUrl = 'https://travall-server.herokuapp.com'
 // const apiUrl = 'http://localhost:3000'
-// const httpOptions = {
-//     headers: new HttpHeaders({
-//         'Content-Type': 'application/json',
-//         'Authorization': sessionStorage.getItem('sessionToken')
-//     })
-// }
 
 @Injectable({
   providedIn: 'root'

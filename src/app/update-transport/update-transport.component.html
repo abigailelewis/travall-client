@@ -11,7 +11,6 @@
         <br>Arrival to dest. or Departure from dest?
       </label>
       <select class="form-control" style="width:auto;" formControlName="dOrA" name="dOrA">
-        <option [value]="transportDetails.dOrA">{{transportDetails.dOrA}}</option>
         <option value="Arrival">Arrival</option>
         <option value="Departure">Departure</option>
       </select>
@@ -34,7 +33,6 @@
     <div class="form-group">
       <label for="type">How?</label>
       <select class="form-control" style="width:auto;" formControlName="type" name="type">
-        <option [value]="transportDetails.type" >{{transportDetails.type}}</option>
         <option value="Flight">Plane</option>
         <option value="Train">Train</option>
         <option value="Bus">Bus</option>
