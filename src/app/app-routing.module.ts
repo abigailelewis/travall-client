@@ -8,6 +8,7 @@ import { AuthGuard } from './help/auth.guard';
 import { AdminGuard } from './help/admin.guard';
 import { AdminComponent } from './admin/admin.component';
 import { AdmincontrolComponent} from './admincontrol/admincontrol.component';
+import { SplashComponent } from './splash/splash.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/about', pathMatch: 'full' },
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
     { path: 'login', component: LoginComponent,  data: {title: 'Login'} },
     { path: 'signup', component: SignupComponent , data: {title: 'Siginup'} },
     { path: 'admin', component: AdminComponent, data: {title: 'Admin'}},
+    { path: 'splash', component: SplashComponent, data:{title: 'Splash'}},
     { path:'admincontrol', component: AdmincontrolComponent, data: {title: 'Admincontrol'}, canActivate: [AdminGuard]},
     { path: 'travall', component: TravallComponent, data: {title: 'Travall'}, canActivate: [AuthGuard]}
 ];
