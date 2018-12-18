@@ -3,10 +3,6 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { routing } from './app-routing.module';
-import { Routes, RouterModule } from '@angular/router';
-import { Observable } from 'rxjs'
-
-// import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CrewComponent } from './crew/crew.component';
 import { NavComponent } from './nav/nav.component';
@@ -35,7 +31,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddMemberComponent } from './add-member/add-member.component';
-// import { MatDialog, MatDialogRef } from '@angular/material';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule, MatCard, MatCardTitle } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
@@ -46,14 +41,12 @@ import { CreatetravallComponent } from './createtravall/createtravall.component'
 import { MapComponent } from './map/map.component';
 import { AdmincontrolComponent } from './admincontrol/admincontrol.component';
 import { AlertComponent } from './alert/alert.component';
-import { SplashComponent } from './splash/splash.component';
 import { CreateTransportComponent } from './create-transport/create-transport.component';
 import { CreateActivityComponent } from './create-activity/create-activity.component';
 import { UpdateTransportComponent } from './update-transport/update-transport.component';
 import { UpdateActivityComponent } from './update-activity/update-activity.component';
 import { AboutheaderComponent } from './aboutheader/aboutheader.component';
 
-// import { CreateTransportComponent } from './create-transport/create-transport.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +66,6 @@ import { AboutheaderComponent } from './aboutheader/aboutheader.component';
     AdmincontrolComponent,
     AddMemberComponent,
     AlertComponent,
-    SplashComponent,
     CreateTransportComponent,
     CreateActivityComponent,
     UpdateTransportComponent,
@@ -101,8 +93,6 @@ import { AboutheaderComponent } from './aboutheader/aboutheader.component';
     CommonModule,
     FormsModule,
     NgbModule,
-    // MatDialog,
-    // MatDialogRef,
     MatDialogModule,
 
 

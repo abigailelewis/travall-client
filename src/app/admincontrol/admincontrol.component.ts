@@ -11,7 +11,6 @@ import { Travall } from '../models/travall';
   styleUrls: ['./admincontrol.component.scss']
 })
 export class AdmincontrolComponent implements OnInit {
-  // sessionToken: string = localStorage.getItem('currentAdmin');
   user: any = [];
   users: User[];
   loading = false;
@@ -58,18 +57,8 @@ export class AdmincontrolComponent implements OnInit {
 
         });
   }
-  // delete(id) {
-  //     this.admincontrolService.deleteUser(id)
-  //       .subscribe(res => {
-  //         this.getAll();
-  //       }, (err) => {
-  //         console.log(err);
-  //       }
-  //       );
-  //     }
 
   delete(user: User): void {
-    // this.users = this.users.filter(u => u !== user);
     this.admincontrolService.deleteUser(user).subscribe(
       res => {
         this.getAll();
