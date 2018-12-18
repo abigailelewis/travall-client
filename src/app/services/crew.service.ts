@@ -19,7 +19,6 @@ export class CrewService {
   }
 
   addMember(email: any, travallid: any) {
-    console.log(email);
     return this.http.post(`${apiUrl}/travall/adduser/${travallid}`, email)
       .subscribe(response => {
         this.router.navigate(['/travall']);
