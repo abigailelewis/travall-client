@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MatDialog, MatDialogRef } from '@angular/material';
-import { ActivityService } from '@/services/activity.service';
+import { ActivityService } from '../services/activity.service';
 
 
 
