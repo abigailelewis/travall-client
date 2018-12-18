@@ -49,6 +49,7 @@ import { AlertComponent } from './alert/alert.component';
 import { SplashComponent } from './splash/splash.component';
 import { CreateTransportComponent } from './create-transport/create-transport.component';
 import { CreateActivityComponent } from './create-activity/create-activity.component';
+import { AboutheaderComponent } from './aboutheader/aboutheader.component';
 
 // import { CreateTransportComponent } from './create-transport/create-transport.component';
 
@@ -73,6 +74,7 @@ import { CreateActivityComponent } from './create-activity/create-activity.compo
     SplashComponent,
     CreateTransportComponent,
     CreateActivityComponent,
+    AboutheaderComponent,
   ],
   imports: [
     BrowserModule,

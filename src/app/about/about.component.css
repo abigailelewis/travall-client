@@ -1,19 +1,14 @@
 .wrapper {
-  height: 40em;
-  width: 120.5em;
+  height: 40%;
+  width: auto;
+  padding: 0px;
+  display: block;
+  margin: 0 auto;
   align-content: center;
-  margin-left: -26.5em;
-  border: 10px solid ;
+  background-size: 100% 350%;
 }
 
-.carousel {
-  object-fit:cover;
+.about {
+text-align: center;
 }
 
-h1 {
-  margin-bottom: 10em;
-}
-
-p {
-  margin-bottom: 15em;
-}
