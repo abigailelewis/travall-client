@@ -1,8 +1,8 @@
 ## Table of Contents
-0. [About Travall](##AboutTravall App)
+0. [About](##AboutTravall App)
 1. [Motivation](##Motivation)
 2. [ScreenShots](##ScreenShots)
-3. [Tech/framework used]( ##Tech/framework used)
+3. [Tech/framework]( ##Tech/framework used)
 4. [Functionality]( ##Functionality)
 5. [Installation](##Installation)
 6. [Credits]( ##Credits)
