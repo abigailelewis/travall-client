@@ -50,7 +50,7 @@ export class NavComponent implements OnInit {
 
 
   openDialog() {
-    if (this.currentUser != '') {
+    if (this.currentUser !== '') {
       this.dialog.open(CreatetravallComponent);
     } else {
       this.router.navigate(['/login']);
