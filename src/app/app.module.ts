@@ -100,7 +100,7 @@ import { AboutheaderComponent } from './aboutheader/aboutheader.component';
       apiKey: ''
     })
   ],
-  providers: [,
+  providers: [
         AuthGuard,
         AlertService,
         AuthService,
