@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit {
         this.authService.login(this.f.username.value, this.f.password.value)
             .pipe(first())
             .subscribe(
-                data => { this.router.navigate(['/travall'])
+                data => { this.router.navigate(['/splash'])
                  
                 },
                 error => {

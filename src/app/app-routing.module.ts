@@ -18,7 +18,7 @@ const appRoutes: Routes = [
     { path: 'login', component: LoginComponent,  data: {title: 'Login'} },
     { path: 'signup', component: SignupComponent , data: {title: 'Siginup'} },
     { path: 'admin', component: AdminComponent, data: {title: 'Admin'}},
-    { path: 'splash', component: SplashComponent, data:{title: 'Splash'}},
+    { path: 'splash', component: SplashComponent, data:{title: 'Splash'},canActivate: [AuthGuard]},
     { path:'admincontrol', component: AdmincontrolComponent, data: {title: 'Admincontrol'}, canActivate: [AdminGuard]},
     { path: 'travall', component: TravallComponent, data: {title: 'Travall'}, canActivate: [AuthGuard]}
 ];
