@@ -1,15 +1,19 @@
   <div class="container">
  <h1>Your Crew</h1>
-  <div class="card border-primary col-sm-3 mt-3 rounded bg-light " *ngFor="let member of members">
-      <button (click)="deleteMember(member.id)" style="float: right; width: 24px; text-align: center;">x</button>
+ <div class="row">
+  <div class="card  col-sm-4 mt-4 rounded bg-light " *ngFor="let member of members">
+   
     
     <div class="card-body">
+       
+        <button (click)="deleteMember(member.id)" style="float: right; width: 2em; text-align: center; ">x</button>
         <h1 class="card-header bg-transparent border-primary" id="border-primary">{{member.username}}</h1>
         <p class="card-text">{{member.email}}</p>
   </div>
+  </div>
 </div>
       
-      
+      <br>
       <button class="navButton" mat-raised-button="accent" (click)="openDialog()">Add Member
         </button>
 </div>

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { TransportationService } from '@/services/transportation.service';
 import { CreateTransportComponent } from '../create-transport/create-transport.component';
+import { Transport } from '../models/transport';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-transportation',
@@ -14,7 +16,8 @@ export class TransportationComponent implements OnInit {
 
   constructor(
     private transportService: TransportationService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private http: HttpClient
   ) { }
 
   ngOnInit() {
