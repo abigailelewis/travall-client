@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
         private router: Router,
         private alertService: AlertService,
         private authService: AuthService) {}
-        
+
 
 
 
@@ -34,8 +34,8 @@ export class LoginComponent implements OnInit {
             password: ['', Validators.required]
         });
 
-       
-      
+
+
         this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
     }
 
@@ -57,15 +57,14 @@ export class LoginComponent implements OnInit {
         this.authService.login(this.f.username.value, this.f.password.value)
             .pipe(first())
             .subscribe(
-                data => { this.router.navigate(['/travall'])
-                 
+                data => { this.router.navigate(['/splash'])
                 },
                 error => {
                     this.alertService.error(error);
                     this.loading = false;
                 });
     }
-   
+
 }
 
 

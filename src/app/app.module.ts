@@ -37,7 +37,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddMemberComponent } from './add-member/add-member.component';
 // import { MatDialog, MatDialogRef } from '@angular/material';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MatCardModule } from '@angular/material';
+import { MatCardModule, MatCard, MatCardTitle } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -47,6 +47,7 @@ import { MapComponent } from './map/map.component';
 import { AdmincontrolComponent } from './admincontrol/admincontrol.component';
 import { AlertComponent } from './alert/alert.component';
 import { SplashComponent } from './splash/splash.component';
+
 // import { CreateTransportComponent } from './create-transport/create-transport.component';
 
 @NgModule({

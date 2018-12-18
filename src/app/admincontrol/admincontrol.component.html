@@ -1,20 +1,30 @@
-<p>
-  <a class="nav-item nav-link" (click)="logout()">Logout </a>
-</p>
-<div>
+
+
+    <div class="container" style="align-content: center"> 
+        <div class="row" style="margin: auto">
+           <div class="col-sm-6" style="align-self: center" style="align-content: center">
+    
   <h1>All Members</h1>
   <div *ngFor="let u of user">
    
       <mat-card >{{u.username}}     <button style="float: right; width: 24px; text-align: center; color: red;"  class="delete" title="delete user"
         (click)="delete(u.id)">x</button></mat-card> 
         <mat-divider></mat-divider>
+        <mat-divider></mat-divider>
       </div>
+    </div>
+  </div>
+  <div class="row" style="margin: auto">
+      <div class="col-sm-6" style="align-self: center" style="align-content: center">
       <h1>All Tavalls</h1>
   <div *ngFor="let t of travall">
    
       <mat-card >{{t.title}}     <button style="float: right; width: 24px; text-align: center; color: red;"  class="delete" title="delete travall"
         (click)="deleteTravall(t.id)">x</button></mat-card> 
         <mat-divider></mat-divider>
+        <mat-divider></mat-divider>
+     </div>
+     </div> 
       </div>
 
   <!-- <ul>All travalls</ul>

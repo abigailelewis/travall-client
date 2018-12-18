@@ -14,8 +14,8 @@ export class CrewService {
 
   constructor(private http: HttpClient, private router: Router) { }
 
-  getCrew(travallid: any): Observable<User[]> {
-    return this.http.get<User[]>(`${apiUrl}/travall/getcrew/${travallid}`);
+  getCrew(id: number): Observable<User[]> {
+    return this.http.get<User[]>(`${apiUrl}/travall/getcrew/${id}`);
   }
 
   addMember(email: any, travallid: any) {

@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SplashComponent implements OnInit {
 
+  getUrl() {
+    return "url('logo_transparent.png')";
+  }
+
   constructor() { }
 
   ngOnInit() {
