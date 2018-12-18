@@ -112,6 +112,7 @@ import { AlertComponent } from './alert/alert.component';
   bootstrap: [AppComponent],
   entryComponents: [
     AddMemberComponent,
+    CreatetravallComponent,
 ],
 })
 export class AppModule { }
