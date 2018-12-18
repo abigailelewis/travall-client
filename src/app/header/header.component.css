@@ -1,8 +1,17 @@
   p{
      color: grey;
-     font-size: 1.5em;
+
    }
+   h4{
+     color: grey;
+   }
+   h1{
+    color: grey;
+  }
    
+   h6{
+     color: grey;
+   }
    .container {
     margin-top: 1em;
     padding: .5em;
