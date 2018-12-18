@@ -1,27 +1,15 @@
-<!-- <div>
-  <mat-card *ngFor="let member of members">
-   
-    <mat-card-title>{{member.username}}</mat-card-title>
-    <mat-card-subtitle>{{member.email}}</mat-card-subtitle>
-  -->
-
-<!-- </mat-card> -->
-
-<h1>Your Crew</h1>
-<div *ngFor="let member of members">
-
-  <mat-card>
-    <mat-card-title> {{member.username}} </mat-card-title>
-    <mat-divider></mat-divider>
-    <mat-divider></mat-divider>
-  </mat-card>
-  
+  <div class="container">
+ <h1>Your Crew</h1>
+  <div class="card border-primary col-sm-3 mt-3 rounded bg-light " *ngFor="let member of members">
+      <button (click)="deleteMember(member.id)" style="float: right; width: 24px; text-align: center;">x</button>
+    
+    <div class="card-body">
+        <h1 class="card-header bg-transparent border-primary" id="border-primary">{{member.username}}</h1>
+        <p class="card-text">{{member.email}}</p>
+  </div>
 </div>
-<button mat-button (click)="openDialog()">Add Member</button>
-
-
-<!-- <ul>Crew Members</ul>
-  <li *ngFor="let member of members"><span>{{member.username}}</span></li>
-  <button mat-button (click)="openDialog()">Add Member
-  </button>
-</div> -->
+      
+      
+      <button class="navButton" mat-raised-button="accent" (click)="openDialog()">Add Member
+        </button>
+</div>

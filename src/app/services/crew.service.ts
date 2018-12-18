@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { User } from '../models/user';
+import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { User } from '../models/user';
@@ -11,6 +14,7 @@ const apiUrl = 'https://travall-server.herokuapp.com'
   providedIn: 'root'
 })
 export class CrewService {
+  currentTravall: any = JSON.parse(sessionStorage.getItem('currentTravall')) || '';
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -24,5 +28,13 @@ export class CrewService {
         this.router.navigate(['/travall']);
         location.reload();
       })
+  }
+
+  deleteMember(userid: any): Observable<any> {
+    
+      return this.http.delete<any>(`${apiUrl}/travall/dropuser/${this.currentTravall.id}/${userid}`).pipe(
+      tap(_ => console.log(`deleted user id=${userid}`)),
+     
+    );
   }
 }
