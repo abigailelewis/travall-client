@@ -36,9 +36,9 @@ export class AdmincontrolService {
     );
   }
   deleteTravall(travall: Travall | number): Observable<Travall> {
-    const id = typeof travall === 'number' ? travall : travall.id;
-    return this.http.delete<Travall>(`${apiUrl}/admin/travall/${id}`).pipe(
-      tap(_ => console.log(`deleted travall id=${id}`)),
+    const idt = typeof travall === 'number' ? travall : travall.id;
+    return this.http.delete<Travall>(`${apiUrl}/admin/travall/${idt}`).pipe(
+      tap(_ => console.log(`deleted travall id=${idt}`)),
     //   catchError(this.handleError<any>('deleteProduct'))
     );
   }
