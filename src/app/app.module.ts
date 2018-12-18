@@ -47,6 +47,7 @@ import { MapComponent } from './map/map.component';
 import { AdmincontrolComponent } from './admincontrol/admincontrol.component';
 import { AlertComponent } from './alert/alert.component';
 import { SplashComponent } from './splash/splash.component';
+import { CreateTransportComponent } from './create-transport/create-transport.component';
 
 // import { CreateTransportComponent } from './create-transport/create-transport.component';
 
@@ -69,7 +70,7 @@ import { SplashComponent } from './splash/splash.component';
     AddMemberComponent,
     AlertComponent,
     SplashComponent,
-    // CreateTransportComponent,
+    CreateTransportComponent,
   ],
   imports: [
     BrowserModule,
@@ -116,6 +117,7 @@ import { SplashComponent } from './splash/splash.component';
   entryComponents: [
     AddMemberComponent,
     CreatetravallComponent,
+    CreateTransportComponent,
 ],
 })
 export class AppModule { }

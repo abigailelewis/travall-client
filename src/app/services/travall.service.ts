@@ -1,10 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Router, ActivatedRoute } from '@angular/router';
-
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { User } from '../models/user';
-import { Travall } from '../models/travall';
-import { Observable } from 'rxjs';
 
  const apiUrl = 'https://travall-server.herokuapp.com'
 // const apiUrl = 'http://localhost:3000/travall'
@@ -12,7 +9,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TravallService {
-  constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
+
+  constructor(private http: HttpClient, private router: Router) { }
 
   getTravalls(user: User) {
     return this.http.get(apiUrl + `/travall/getall/` + user.id)

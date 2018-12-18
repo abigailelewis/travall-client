@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
-import { Router } from '@angular/router';
 import { MatDialog, MatDialogRef } from '@angular/material';
 
 import { TravallService } from '../services/travall.service';
@@ -14,22 +13,21 @@ export class CreatetravallComponent implements OnInit {
   createTravallForm: FormGroup;
   currentUser: any = JSON.parse(sessionStorage.getItem('currentUser')) || '';
 
-  constructor(private formBuilder: FormBuilder, private router: Router, private matDialogRef: MatDialogRef<CreatetravallComponent>, public dialog: MatDialog, private travallService: TravallService, ) { }
+  constructor(private formBuilder: FormBuilder, private matDialogRef: MatDialogRef<CreatetravallComponent>, public dialog: MatDialog, private travallService: TravallService, ) { }
 
   ngOnInit() {
     this.createTravallForm = this.formBuilder.group({
-      title: new FormControl(),
-      location: new FormControl(),
-      type: new FormControl(),
-      startDate: new FormControl(),
-      endDate: new FormControl(),
-      user: this.currentUser,
+      "title": new FormControl(),
+      "location": new FormControl(),
+      "type": new FormControl(),
+      "startDate": new FormControl(),
+      "endDate": new FormControl(),
+      "user": this.currentUser,
     });
   }
 
   onSubmit() {
     this.travallService.createTravall(this.createTravallForm.value);
     this.matDialogRef.close();
-    // location.reload();
-    }
   }
+}
