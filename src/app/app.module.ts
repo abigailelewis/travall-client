@@ -114,6 +114,7 @@ import { SplashComponent } from './splash/splash.component';
   bootstrap: [AppComponent],
   entryComponents: [
     AddMemberComponent,
+    CreatetravallComponent,
 ],
 })
 export class AppModule { }
