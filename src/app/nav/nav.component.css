@@ -12,13 +12,18 @@
 }
 .dropdown:hover .dropdown-content {
   display: block;
+  padding-top: .4em;
+  align-content: center;
+  border-radius: 5px;
 }
 
 ul {
   list-style-type: none;
 }
 
-
+.navButton {
+  margin-left: .5em;
+}
 
 .navlink {
   margin-right: 10px;
@@ -32,8 +37,6 @@ ul {
 }
 
 #addTravallButton {
-  margin-left: auto;
-  margin-right: auto;
   margin-top: .3em;
   font-size: 1em;
 }
