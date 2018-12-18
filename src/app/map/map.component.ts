@@ -28,7 +28,6 @@ export class MapComponent implements OnInit {
 
   ngOnInit() {
     this.map.getLocation().subscribe(data =>{
-      console.log(data);
       this.lat = data.latitude;
       this.lng = data.longitude;
     })
