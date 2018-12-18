@@ -49,6 +49,8 @@ import { AlertComponent } from './alert/alert.component';
 import { SplashComponent } from './splash/splash.component';
 import { CreateTransportComponent } from './create-transport/create-transport.component';
 import { CreateActivityComponent } from './create-activity/create-activity.component';
+import { UpdateTransportComponent } from './update-transport/update-transport.component';
+import { UpdateActivityComponent } from './update-activity/update-activity.component';
 import { AboutheaderComponent } from './aboutheader/aboutheader.component';
 
 // import { CreateTransportComponent } from './create-transport/create-transport.component';
@@ -74,6 +76,8 @@ import { AboutheaderComponent } from './aboutheader/aboutheader.component';
     SplashComponent,
     CreateTransportComponent,
     CreateActivityComponent,
+    UpdateTransportComponent,
+    UpdateActivityComponent,
     AboutheaderComponent,
   ],
   imports: [
@@ -123,6 +127,8 @@ import { AboutheaderComponent } from './aboutheader/aboutheader.component';
     CreatetravallComponent,
     CreateTransportComponent,
     CreateActivityComponent,
+    UpdateTransportComponent,
+    UpdateActivityComponent,
 ],
 })
 export class AppModule { }

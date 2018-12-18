@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { ActivityService } from '@/services/activity.service';
 import { CreateActivityComponent } from '@/create-activity/create-activity.component';
-import { HttpClient } from '@angular/common/http';
 import { Activity } from '../models/activity';
+import { UpdateActivityComponent } from '@/update-activity/update-activity.component';
+
 @Component({
   selector: 'app-activity',
   templateUrl: './activity.component.html',
@@ -16,7 +17,6 @@ export class ActivityComponent implements OnInit {
   constructor(
     private activityService: ActivityService,
     private dialog: MatDialog,
-    private http: HttpClient
   ) { }
 
   ngOnInit() {
@@ -25,7 +25,7 @@ export class ActivityComponent implements OnInit {
 
   getActivities() {
     this.activities = [];
-    if (this.currentTravall != '') {
+    if (this.currentTravall !== '') {
       this.activityService.getActivities(this.currentTravall.id)
         .subscribe((data: any) => {
           this.activities = data;
@@ -37,11 +37,17 @@ export class ActivityComponent implements OnInit {
     this.dialog.open(CreateActivityComponent);
   }
 
+  openActivityUpdate(activityid) {
+    this.dialog.open(UpdateActivityComponent, {
+      data: activityid
+    });
+  }
+
   deleteActivity(activityid: Activity) {
     this.activityService.deleteActivity(activityid)
-      .subscribe(res => {
+      .subscribe(() => {
         this.getActivities();
-      }, (err) => {
+      }, err => {
         console.log(err);
       }
       );

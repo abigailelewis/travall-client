@@ -38,7 +38,6 @@ export class CreateActivityComponent implements OnInit {
   onSubmit() {
     this.activityService.createActivity(this.createActivityForm.value);
     this.matDialogRef.close();
-    this.router.navigate(['/travall']);
   }
 
 }
