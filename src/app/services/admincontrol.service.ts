@@ -27,7 +27,7 @@ export class AdmincontrolService {
   getAlltravall(travall: any): Observable<Travall[]> {
     return this.http.get<Travall[]>(`${apiUrl}/admin/travall`)
   }
-  
+
   deleteUser(user: User | number): Observable<User> {
     const id = typeof user === 'number' ? user : user.id;
     return this.http.delete<User>(`${apiUrl}/admin/user/${id}`).pipe(
@@ -46,3 +46,7 @@ export class AdmincontrolService {
     sessionStorage.clear();
 }
 }
+
+
+
+
