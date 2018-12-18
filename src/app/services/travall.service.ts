@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { User } from '../models/user';
 
  const apiUrl = 'https://travall-server.herokuapp.com'
-// const apiUrl = 'http://localhost:3000/travall'
+// const apiUrl = 'http://localhost:3000'
 @Injectable({
   providedIn: 'root'
 })

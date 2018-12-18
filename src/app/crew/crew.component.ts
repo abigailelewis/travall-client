@@ -26,7 +26,7 @@ export class CrewComponent implements OnInit {
   getCrew() {
     this.members = [];
     if (this.currentTravall != '') {
-      this.crewService.getCrew(this.currentTravall.id)
+      this.crewService.getCrew(this.currentTravall.travall.id)
         .subscribe((data: any) => {
           this.members = data.members.users;
         });
