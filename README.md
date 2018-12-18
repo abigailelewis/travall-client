@@ -1,5 +1,5 @@
 # Table of Contents
-0. [About](## About )
+0. [About](## About)
 1. [Motivation](## Motivation)
 2. [Tech/framework](## Tech/framework)
 3. [Functionality](## Functionality)
