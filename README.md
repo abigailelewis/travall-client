@@ -1,13 +1,3 @@
-# Table of Contents
-0. [About](## About )
-1. [Motivation](## Motivation)
-2. [Tech/framework](## Tech/framework)
-3. [Functionality](## Functionality)
-4. [Installation](## Installation)
-5. [Credits](## Credits)
-6. [Contact](## Contact)
-
-
 ## About
 
 Travall is a collaborative application where you can help stay organized with other about your upcoming travel plans.  Creating a Travall will allow you to others to your upcoming trip as well as display your transportation details and any/all activities you would like to do while on the trip.  Travall will keep you and your friends/family organized and informed about your next upcoming travall plans.  

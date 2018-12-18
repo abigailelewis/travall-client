@@ -33,7 +33,7 @@ export class UpdateTransportComponent implements OnInit {
 
   updateForm() {
     this.updateTransportForm = this.formBuilder.group({
-      "dOrA": new FormControl(),
+      "dOrA": this.transportDetails.dOrA,
       "type": this.transportDetails.type,
       "date": this.transportDetails.date,
       "upTime": this.transportDetails.upTime,
