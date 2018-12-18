@@ -1,8 +1,8 @@
 
 
     <div class="container" style="align-content: center"> 
-        <div class="row" style="margin: auto">
-           <div class="col-sm-4"  style="align-content: center">
+        <div class="row" style="text-align: center">
+           <div class="col-sm-12"  style="text-align: center" style="align-content: center">
     
   <h1>All Members</h1>
   <div *ngFor="let u of user">
@@ -17,7 +17,7 @@
 </div>
   <div class="container" style="align-content: center"> 
   <div class="row" style="margin: auto">
-      <div class="col-sm-4" style="align-self: center" style="align-content: center">
+      <div class="col-sm-12" style="align-self: center" style="align-content: center">
       <h1>All Tavalls</h1>
   <div *ngFor="let t of travall">
    
@@ -29,31 +29,3 @@
      </div> 
       </div>
       </div>
-
-  <!-- <ul>All travalls</ul>
-  <li *ngFor="let t of travall">
-   
-      <span class="badge">{{t.title}}</span> 
-    
-
-    <button class="delete" title="delete travall"
-(click)="deleteTravall(t.id)">x</button>
-  </li> -->
-  <!-- <li *ngFor="let u of user"><span>{{u.username}}</span><button (click)="delete(user.id)" style="text-align: center;">x</button></li>
-  <button (click)="delete(u.id)" style="float: right; width: 24px; text-align: center;">x</button>
-</div> -->
-<!-- <div class="body">
-  <h1 class="card-header col-sm bg-light border-success">Let the spirits guide you to the right Plant! </h1>
-  <div class="row">
-    <div class="card border-success col-sm-3 mt-3 rounded bg-light " *ngFor="let product of products">
-      <div *ngFor="let u of user"><span>{{u.username}}</span>>
-        <button (click)="delete(user.id)" style="float: right; width: 24px; text-align: center;">x</button>
-      </div>
-      <div class="card-body text-success">
-        <h1 class="card-header bg-transparent border-success">{{u.username}}</h1>
-        <p class="card-text">{{u.email}}</p>
-        
-      </div>
-    </div>
-  </div>
-</div> -->
