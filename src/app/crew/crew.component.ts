@@ -35,22 +35,10 @@ export class CrewComponent implements OnInit {
     }
   }
  
-
   openDialog() {
     this.dialog.open(AddMemberComponent);
   }
 
-
-  // delete(userid: User): void {
-  //   // this.users = this.users.filter(u => u !== user);
-  //   this.crewService.deleteMember(userid).subscribe(
-  //     res => {
-  //               this.getCrew();
-  //             }, (err) => {
-  //               console.log(err);
-  //             }
-  //   );
-  // }
   deleteMember(userid: User) {
     this.crewService.deleteMember(userid)
       .subscribe(res => {
