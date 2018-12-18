@@ -24,7 +24,7 @@ export class ActivityComponent implements OnInit {
   getActivities() {
     this.activities = [];
     if (this.currentTravall != '') {
-      this.activityService.getActivities(this.currentTravall.id)
+      this.activityService.getActivities(this.currentTravall.travall.id)
         .subscribe((data: any) => {
           this.activities = data;
         });

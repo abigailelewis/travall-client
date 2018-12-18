@@ -27,7 +27,7 @@ export class TransportationComponent implements OnInit {
   getTransports() {
     this.transports = [];
     if (this.currentTravall != '') {
-      this.transportService.getTransports(this.currentTravall.id)
+      this.transportService.getTransports(this.currentTravall.travall.id)
         .subscribe((data: any) => {
           this.transports = data;
         });
