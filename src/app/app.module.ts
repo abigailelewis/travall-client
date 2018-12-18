@@ -48,6 +48,10 @@ import { AdmincontrolComponent } from './admincontrol/admincontrol.component';
 import { AlertComponent } from './alert/alert.component';
 import { SplashComponent } from './splash/splash.component';
 import { CreateTransportComponent } from './create-transport/create-transport.component';
+import { CreateActivityComponent } from './create-activity/create-activity.component';
+import { UpdateTransportComponent } from './update-transport/update-transport.component';
+import { UpdateActivityComponent } from './update-activity/update-activity.component';
+import { AboutheaderComponent } from './aboutheader/aboutheader.component';
 
 // import { CreateTransportComponent } from './create-transport/create-transport.component';
 
@@ -71,6 +75,10 @@ import { CreateTransportComponent } from './create-transport/create-transport.co
     AlertComponent,
     SplashComponent,
     CreateTransportComponent,
+    CreateActivityComponent,
+    UpdateTransportComponent,
+    UpdateActivityComponent,
+    AboutheaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -118,6 +126,9 @@ import { CreateTransportComponent } from './create-transport/create-transport.co
     AddMemberComponent,
     CreatetravallComponent,
     CreateTransportComponent,
+    CreateActivityComponent,
+    UpdateTransportComponent,
+    UpdateActivityComponent,
 ],
 })
 export class AppModule { }

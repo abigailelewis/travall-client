@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CreateTransportComponent } from './create-transport.component';
+import { CreateActivityComponent } from './create-activity.component';
 
-describe('CreateTransportComponent', () => {
-  let component: CreateTransportComponent;
-  let fixture: ComponentFixture<CreateTransportComponent>;
+describe('CreateActivityComponent', () => {
+  let component: CreateActivityComponent;
+  let fixture: ComponentFixture<CreateActivityComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CreateTransportComponent ]
+      declarations: [ CreateActivityComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CreateTransportComponent);
+    fixture = TestBed.createComponent(CreateActivityComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

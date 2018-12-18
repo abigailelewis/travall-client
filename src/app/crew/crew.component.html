@@ -1,27 +1,22 @@
-<!-- <div>
-  <mat-card *ngFor="let member of members">
-   
-    <mat-card-title>{{member.username}}</mat-card-title>
-    <mat-card-subtitle>{{member.email}}</mat-card-subtitle>
-  -->
+  <div class="container">
+      <button class="navButton" mat-raised-button="accent" (click)="openDialog()" style="float: right">Add Member
+        </button>
+ <h1>Your Crew</h1>
+ <div class="row">
+    <div class="card-columns">
+  <div class="card  col-sm-10 mt-4 rounded bg-light " *ngFor="let member of members">
 
-<!-- </mat-card> -->
 
-<h1>Your Crew</h1>
-<div *ngFor="let member of members">
+    <div class="card-body">
 
-  <mat-card>
-    <mat-card-title> {{member.username}} </mat-card-title>
-    <mat-divider></mat-divider>
-    <mat-divider></mat-divider>
-  </mat-card>
-  
+        <button mat-mini-fab="accent" (click)="deleteMember(member.id)" style="float: right; width: 1em; text-align: center; ">x</button>
+        <h6 class="card-header bg-transh6arent border-primary" id="border-primary">{{member.username}}</h6>
+        <p class="card-text">{{member.email}}</p>
+  </div>
+  </div>
+  </div>
 </div>
-<button mat-button (click)="openDialog()">Add Member</button>
 
+      <br>
 
-<!-- <ul>Crew Members</ul>
-  <li *ngFor="let member of members"><span>{{member.username}}</span></li>
-  <button mat-button (click)="openDialog()">Add Member
-  </button>
-</div> -->
+</div>

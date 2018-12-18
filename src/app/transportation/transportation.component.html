@@ -1,1 +1,28 @@
-<button mat-button (click)="openDialog()">Add Transportation</button>
+<div class="container">
+    <button class="navButton" mat-raised-button="accent" (click)="openDialog()" style="float: right"> Add
+        Transportation</button>
+    <h1>Transportation Schedule</h1>
+    <table class="table" size="sm">
+        <thead>
+            <tr>
+                <th>Who</th>
+                <th>What</th>
+                <th>When</th>
+                <th>Time Up</th>
+                <th>Time Down</th>
+                <th>How</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let transport of transports">
+            <td>{{transport.participants}}</td>
+            <td>{{transport.dOrA}}</td>
+            <td>{{transport.date}}</td>
+            <td>{{transport.upTime}}</td>
+            <td>{{transport.downTime}}</td>
+            <td>{{transport.type}}</td>
+            <td> <button (click)="deleteTransport(transport.id)" style="float: right; width: 2em; text-align: center; ">x</button></td>
+            <td> <button (click)="openTransportUpdate(transport.id)" style="float: right; width: 2em; text-align: center; ">update</button></td>
+        </tbody>
+    </table>
+</div>
