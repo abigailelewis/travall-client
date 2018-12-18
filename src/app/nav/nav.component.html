@@ -1,55 +1,22 @@
-
-<nav>
 <mat-toolbar color="primary" class="toolbar">
-      <button mat-icon-button [matMenuTriggerFor]="menu">
-          <i class="material-icons">
-              airplanemode_active
-              </i>
-            </button>
-            <mat-menu #menu="matMenu">
-                <button mat-menu-item routerLink="/travall">Travall</button>
-              </mat-menu>
-
-
-
-
-
-
-<mat-toolbar color="primary">
-  <span>Travall</span>
-  <span class="fill-remaining"></span>
-
-
-  <button mat-raised-button="accent" routerLink="/about">About</button>
-  <button mat-raised-button="accent" routerLink="/login">Login</button>
-  <button mat-raised-button="accent" routerLink="/admin">Admin</button>
-
-  <button mat-fab color="accent" routerLink="/about">About</button>
   <div class="dropdown">
-    <button mat-fab color="accent" routerLink="/travall">Travall</button>
+    <button mat-icon-button routerLink="/travall" [matMenuTriggerFor]="menu">
+      <i class="material-icons">
+        airplanemode_active
+      </i>Travall
+    </button>
     <div class="dropdown-content">
-        <button id="addTravallButton" mat-button color="primary" (click)="openDialog()">Add a Travall
-        </button>
-        <ul id="dropdown-travalls">
-          <li *ngFor="let travall of travalls">
-            <a (click)="setCurrentTravall(travall)" routerLink="/travall">{{travall.title}}</a>
-          </li>
-        </ul>
+      <button id="addTravallButton" mat-button color="primary" (click)="openDialog()">Add a Travall</button>
+      <ul id="dropdown-travalls">
+        <li *ngFor="let travall of travalls">
+          <a (click)="setCurrentTravall(travall)" routerLink="/travall">{{travall.title}}</a>
+        </li>
+      </ul>
     </div>
   </div>
-  <button mat-fab color="accent" routerLink="/login">Login</button>
-  <button mat-fab color="accent" routerLink="/admin">Admin</button>
-
-  <a class="nav-item nav-link" (click)="logout()">Logout </a>
-
+  <span class="fill-remaining"></span>
+  <button class="navButton" mat-raised-button="accent" routerLink="/admin">Admin</button>
+  <button class="navButton" mat-raised-button="accent" routerLink="/login">Login</button>
+  <button class="navButton" mat-raised-button="accent" routerLink="/about">About</button>
+  <a class="nav-item nav-link" (click)="logout()">Logout</a>
 </mat-toolbar>
-
-<script>
-  if (sessionStorage.getItem('currentUser') !== '') {
-    document.getElementById("addTravallButton").style.display = 'block';
-  }
-
-  else {
-    document.getElementById('se-pre-con').style.display = "none";
-  }
-</script>

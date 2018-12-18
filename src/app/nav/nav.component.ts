@@ -53,7 +53,6 @@ export class NavComponent implements OnInit {
       this.router.navigate(['/login']);
     } else {
       this.dialog.open(CreatetravallComponent);
-     
     }
   }
 
