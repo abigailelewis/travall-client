@@ -34,6 +34,7 @@ export class CrewComponent implements OnInit {
       return
     }
   }
+ 
 
   openDialog() {
     this.dialog.open(AddMemberComponent);
