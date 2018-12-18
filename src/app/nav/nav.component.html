@@ -1,9 +1,7 @@
 <mat-toolbar color="primary" class="toolbar">
   <div class="dropdown">
     <button mat-icon-button routerLink="/travall" [matMenuTriggerFor]="menu">
-      <i class="material-icons">
-        airplanemode_active
-      </i>Travall
+      <i class="material-icons">airplanemode_active</i><span id="travallMenuTitle">Travall</span>
     </button>
     <div class="dropdown-content">
       <button id="addTravallButton" mat-button color="primary" (click)="openDialog()">Add a Travall</button>
