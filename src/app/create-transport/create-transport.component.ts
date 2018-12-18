@@ -12,6 +12,7 @@ import { TransportationService } from '@/services/transportation.service';
 export class CreateTransportComponent implements OnInit {
   createTransportForm: FormGroup;
   currentTravall: any = JSON.parse(sessionStorage.getItem('currentTravall')) || '';
+  loading: any;
 
   constructor(
     private formBuilder: FormBuilder,

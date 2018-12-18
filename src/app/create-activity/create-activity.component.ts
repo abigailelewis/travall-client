@@ -14,6 +14,7 @@ import { ActivityService } from '../services/activity.service';
 export class CreateActivityComponent implements OnInit {
   createActivityForm: FormGroup;
   currentTravall: any = JSON.parse(sessionStorage.getItem('currentTravall')) || '';
+  loading: any;
 
   constructor(
     private formBuilder: FormBuilder, 

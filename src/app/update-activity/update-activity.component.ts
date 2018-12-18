@@ -15,6 +15,7 @@ export class UpdateActivityComponent implements OnInit {
   currentTravall: any = JSON.parse(sessionStorage.getItem('currentTravall')) || '';
   activityDetails: Activity;
   activityForm: FormGroup;
+  loading: any;
 
   constructor(
     @Inject(MAT_DIALOG_DATA) private data: any,
