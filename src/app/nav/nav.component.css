@@ -18,12 +18,14 @@
   color: black;
 }
 
+
 ul {
   list-style-type: none;
 }
 
 .navButton {
   margin-left: .6em;
+  outline: none;
   font-size: .9em;
 }
 

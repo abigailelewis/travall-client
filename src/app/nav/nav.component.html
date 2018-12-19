@@ -7,9 +7,9 @@
   <span class="fill-remaining"></span>
 
   <div class="dropdown">
-    <button class="navButton" mat-button="accent"> MyTravalls </button>
+    <button class="navButton" mat-button="primary"> MyTravalls </button>
       <div class="dropdown-content">
-        <button id="addTravallButton" mat-button color="primary" (click)="openDialog()">Add a Travall</button>
+        <button id="addTravallButton" mat-button color="accent" (click)="openDialog()">Add a Travall</button>
         <ul id="dropdown-travalls">
           <li *ngFor="let travall of travalls">
             <a (click)="setCurrentTravall(travall)" routerLink="/travall">{{travall.title}}</a>
@@ -18,9 +18,8 @@
       </div>
     </div>
 
-  <button class="navButton" mat-button="accent" routerLink="/about">About</button>
-  <button class="navButton" mat-button="accent" routerLink="/admin">Admin</button>
-  <button class="navButton" mat-button="accent" routerLink="/login">Login</button>
-
-  <button class="navButton" mat-button="accent" (click)="logout()">Logout</button>
+  <button class="navButton" mat-button="primary" routerLink="/about">About</button>
+  <button class="navButton" mat-button="primary" routerLink="/admin">Admin</button>
+  <button class="navButton" mat-button="primary" routerLink="/login">Login</button>
+  <button class="navbutton" mat-button="primary" (click)="logout()">Logout</button>
 </mat-toolbar>
