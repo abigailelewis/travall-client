@@ -70,7 +70,7 @@ import { AboutheaderComponent } from './aboutheader/aboutheader.component';
     CreateActivityComponent,
     UpdateTransportComponent,
     UpdateActivityComponent,
-    AboutheaderComponent,
+    AboutheaderComponent
   ],
   imports: [
     BrowserModule,
@@ -100,7 +100,7 @@ import { AboutheaderComponent } from './aboutheader/aboutheader.component';
       apiKey: ''
     })
   ],
-  providers: [,
+  providers: [
         AuthGuard,
         AlertService,
         AuthService,
@@ -108,8 +108,7 @@ import { AboutheaderComponent } from './aboutheader/aboutheader.component';
         AdminService,
         AdmincontrolService,
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-
+        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
   ],
   bootstrap: [AppComponent],
   entryComponents: [
@@ -118,7 +117,7 @@ import { AboutheaderComponent } from './aboutheader/aboutheader.component';
     CreateTransportComponent,
     CreateActivityComponent,
     UpdateTransportComponent,
-    UpdateActivityComponent,
+    UpdateActivityComponent
 ],
 })
 export class AppModule { }
