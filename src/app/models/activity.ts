@@ -1,4 +1,5 @@
 export class Activity {
+    id: number;
     title: number;
     date: string;
     startTime: string;
