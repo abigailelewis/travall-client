@@ -40,7 +40,9 @@ export class ActivityComponent implements OnInit {
   openActivityUpdate(activityid) {
     this.dialog.open(UpdateActivityComponent, {
       data: activityid
+      
     });
+    console.log(activityid);
   }
 
   deleteActivity(activityid: Activity) {
