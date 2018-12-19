@@ -2,12 +2,13 @@
   "name": "travall-client",
   "version": "0.0.0",
   "scripts": {
-    "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open",
+    "build": "ng build",
     "ng": "ng",
     "e2e": "ng e2e",
     "lint": "ng lint",
-    "test": "ng test"
+    "test": "ng test",
+    "postinstall": "ng build --prod",
+    "start": "serve -s dist/travallClient/"
   },
   "private": true,
   "dependencies": {
@@ -27,6 +28,7 @@
     "core-js": "^2.5.4",
     "node-sass": "^4.10.0",
     "rxjs": "~6.3.3",
+    "serve": "^10.1.1",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

@@ -15,6 +15,7 @@ export class UpdateTransportComponent implements OnInit {
   currentTravall: any = JSON.parse(sessionStorage.getItem('currentTravall')) || '';
   transportDetails: Transport;
   transportForm: FormGroup;
+  loading: any;
 
   constructor(
     @Inject(MAT_DIALOG_DATA) private data: any,
