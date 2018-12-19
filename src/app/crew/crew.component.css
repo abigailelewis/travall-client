@@ -1,34 +1,23 @@
-/* .container {
-    display: flex;
-    flex-direction:  column;
-  } */
-  .container {
-    /* background-image: url('../assests/pinterest_profile_image.png') ;
-    background-repeat: no-repeat;
-    background-position: right;
-    width: 70%; */
-
-    /* background-size: cover; */
+.container {
     margin-top: 5em;
     padding: 2em;
     border: 3px solid #e5e5e5;
     border-radius: 0.4em;
     box-shadow: 2px 4px 20px
-    #acce9f;
+    grey;
     text-align: center;
     color: grey;
-width: 60em;
+    width: 60em;
 }
 .card {
     margin: .2em;
+   }
 
-    }
-
-    .row {
+.row {
       margin-top: 20px;
       margin-left: 250px;
-      /* margin: auto; */
-    }
+     
+}
 
 
     #border-primary {

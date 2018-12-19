@@ -10,5 +10,14 @@
 
 .about {
 text-align: center;
+padding-top: 2em;
 }
+h1 {
+  color:grey;
+ }
+ 
+ p{
+   color: grey;
+   
+ }
 

@@ -1,19 +1,19 @@
 <h4>Add Transportation</h4>
 <form [formGroup]="createTransportForm" (ngSubmit)="onSubmit()">
-  
-      <div class="form-group">
-          <label for="participants">Who?</label>
-          <br>
-          <input type="text" formControlName="participants" name="participants">
-        </div>
+  <mat-dialog-content>
     <div class="form-group">
-    <label for="dOrA">What? <br> Arrival to dest. or Departure from dest?</label>
-    <select class="form-control" style="width:auto;" formControlName="dOrA" name="dOrA">
-      <option>Arrival</option>
-      <option>Departure</option>
-    </select>
-  </div>
-  <div class="form-group">
+      <label for="participants">Who?</label>
+      <br>
+      <input type="text" formControlName="participants" name="participants">
+    </div>
+    <div class="form-group">
+      <label for="dOrA">What? <br> Arrival to dest. or Departure from dest?</label>
+      <select class="form-control" style="width:auto;" formControlName="dOrA" name="dOrA">
+        <option value="Arrival">Arrival</option>
+        <option value="Departure">Departure</option>
+      </select>
+    </div>
+    <div class="form-group">
       <label for="date">When?</label>
       <br>
       <input type="date" formControlName="date" name="date">
@@ -28,18 +28,21 @@
       <br>
       <input type="text" formControlName="downTime" name="downTime">
     </div>
-  <div class="form-group">
-    <label for="type">How?</label>
-    <select class="form-control" style="width:auto;" formControlName="type" name="type">
-      <option value="Flight">Plane</option>
-      <option value="Train">Train</option>
-      <option value="Bus">Bus</option>
-      <option value="Car">Personal Vehicle</option>
-      <option value="Boat">Boat</option>
-      <option value="Other">Other</option>
-    </select>
-  </div>
-  
-  
-  <button type="submit">Submit</button>
+    <div class="form-group">
+      <label for="type">How?</label>
+      <select class="form-control" style="width:auto;" formControlName="type" name="type">
+        <option value="Flight">Plane</option>
+        <option value="Train">Train</option>
+        <option value="Bus">Bus</option>
+        <option value="Car">Personal Vehicle</option>
+        <option value="Boat">Boat</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close type="button">Cancel</button>
+    <button mat-button color="primary" type="submit">Submit</button>
+    <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+  </mat-dialog-actions>
 </form>

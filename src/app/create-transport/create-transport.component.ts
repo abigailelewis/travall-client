@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
-import { Router } from '@angular/router';
 import { MatDialog, MatDialogRef } from '@angular/material';
 import { TransportationService } from '@/services/transportation.service';
 
@@ -13,13 +12,13 @@ import { TransportationService } from '@/services/transportation.service';
 export class CreateTransportComponent implements OnInit {
   createTransportForm: FormGroup;
   currentTravall: any = JSON.parse(sessionStorage.getItem('currentTravall')) || '';
+  loading: any;
 
   constructor(
-    private formBuilder: FormBuilder, 
-    private router: Router, 
-    private matDialogRef: MatDialogRef<CreateTransportComponent>, public dialog: MatDialog, 
+    private formBuilder: FormBuilder,
+    private matDialogRef: MatDialogRef<CreateTransportComponent>, public dialog: MatDialog,
     private transportService: TransportationService
-    ) { }
+  ) { }
 
   ngOnInit() {
     this.createTransportForm = this.formBuilder.group({
@@ -36,7 +35,6 @@ export class CreateTransportComponent implements OnInit {
   onSubmit() {
     this.transportService.createTransport(this.createTransportForm.value);
     this.matDialogRef.close();
-    this.router.navigate(['/travall']);
   }
 
 }

@@ -14,7 +14,7 @@ export class MapsService {
 
   constructor(private http: HttpClient) { }
 
-  getLocation(){
+  getLocation() {
     return this.http.get<Location>('https://ipapi.co/json')
   }
 

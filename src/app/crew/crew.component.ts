@@ -25,7 +25,7 @@ export class CrewComponent implements OnInit {
 
   getCrew() {
     this.members = [];
-    if (this.currentTravall != '') {
+    if (this.currentTravall !== '') {
       this.crewService.getCrew(this.currentTravall.id)
         .subscribe((data: any) => {
           this.members = data.members.users;
@@ -35,22 +35,10 @@ export class CrewComponent implements OnInit {
     }
   }
  
-
   openDialog() {
     this.dialog.open(AddMemberComponent);
   }
 
-
-  // delete(userid: User): void {
-  //   // this.users = this.users.filter(u => u !== user);
-  //   this.crewService.deleteMember(userid).subscribe(
-  //     res => {
-  //               this.getCrew();
-  //             }, (err) => {
-  //               console.log(err);
-  //             }
-  //   );
-  // }
   deleteMember(userid: User) {
     this.crewService.deleteMember(userid)
       .subscribe(res => {

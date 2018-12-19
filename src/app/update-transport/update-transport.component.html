@@ -1,30 +1,45 @@
-<h2 mat-dialog-title>Create a Travall</h2>
-<form [formGroup]="createTravallForm" (ngSubmit)="onSubmit()">
+<h4>Update Transportation</h4>
+<form [formGroup]="updateTransportForm" (ngSubmit)="onSubmit()">
   <mat-dialog-content>
     <div class="form-group">
-      <label for="title">Title</label>
+      <label for="participants">Who?</label>
       <br>
-      <input type="text" formControlName="title" name="title">
+      <input type="text" formControlName="participants" name="participants">
     </div>
     <div class="form-group">
-      <label for="location">Location</label>
-      <br>
-      <input type="text" formControlName="location" name="location">
+      <label for="dOrA">
+        <br>Arrival to {{currentTravall.title}} or <br> Departure from {{currentTravall.title}}?
+      </label>
+      <select class="form-control" style="width:auto;" formControlName="dOrA" name="dOrA">
+        <option value="Arrival">Arrival</option>
+        <option value="Departure">Departure</option>
+      </select>
     </div>
     <div class="form-group">
-      <label for="type">Type of Trip</label>
+      <label for="date">When?</label>
       <br>
-      <input type="text" formControlName="type" name="type">
+      <input type="date" formControlName="date" name="date">
     </div>
     <div class="form-group">
-      <label for="startDate">Starting Date</label>
+      <label for="upTime">Up Time:</label>
       <br>
-      <input type="date" formControlName="startDate" name="startDate">
+      <input type="text" formControlName="upTime" name="upTime">
     </div>
     <div class="form-group">
-      <label for="endDate">Ending Date</label>
+      <label for="downTime">Down Time:</label>
       <br>
-      <input type="date" formControlName="endDate" name="endDate">
+      <input type="text" formControlName="downTime" name="downTime">
+    </div>
+    <div class="form-group">
+      <label for="type">How?</label>
+      <select class="form-control" style="width:auto;" formControlName="type" name="type">
+        <option value="Flight">Plane</option>
+        <option value="Train">Train</option>
+        <option value="Bus">Bus</option>
+        <option value="Car">Car</option>
+        <option value="Boat">Boat</option>
+        <option value="Other">Other</option>
+      </select>
     </div>
   </mat-dialog-content>
   <mat-dialog-actions align="end">

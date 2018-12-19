@@ -1,0 +1,22 @@
+  p{
+     color: grey;
+
+   }
+   h4{
+     color: grey;
+   }
+   h1{
+    color: grey;
+  }
+   
+   h6{
+     color: grey;
+   }
+   .container {
+    margin-top: 1em;
+    padding: .5em;
+    width: 100%;
+    text-align: center;
+    color: grey;
+
+}

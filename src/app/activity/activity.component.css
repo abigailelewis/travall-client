@@ -4,14 +4,14 @@
     padding: 3em;
   }
   .container {
-   
     margin-top: 5em;
     padding: 2em;
     border: 3px solid #e5e5e5;
     border-radius: 0.4em;
-    box-shadow: 2px 4px 20px 
-    grey; 
+    box-shadow: 2px 4px 20px
+    grey;
     text-align: center;
     color: grey;
-
+    width: 60em;
+    margin-bottom: 5em;
 }

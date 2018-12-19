@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
-import {  UserService } from '../services/user.service';
+import { UserService } from '../services/user.service';
 import { AlertService } from '../services/alert.service';
-import { AuthService } from '../services/auth.service';
 
 @Component({
-  selector: 'app-signup',
-  templateUrl: 'signup.component.html',
-  styleUrls: ['signup.component.css']})
+    selector: 'app-signup',
+    templateUrl: 'signup.component.html',
+    styleUrls: ['signup.component.css']
+})
 export class SignupComponent implements OnInit {
     registerForm: FormGroup;
     loading = false;
@@ -20,13 +20,9 @@ export class SignupComponent implements OnInit {
     constructor(
         private formBuilder: FormBuilder,
         private router: Router,
-        private route: ActivatedRoute,
         private userService: UserService,
-        private authService: AuthService,
-        private alertService: AlertService) { 
-
-           
-        }
+        private alertService: AlertService
+    ) { }
 
     ngOnInit() {
         this.registerForm = this.formBuilder.group({
@@ -35,28 +31,22 @@ export class SignupComponent implements OnInit {
             password: ['', [Validators.required, Validators.minLength(6)]],
             color: ['', Validators.required],
         });
+    }
 
-
-}
-
-    
     get f() { return this.registerForm.controls; }
 
     onSubmit() {
         this.submitted = true;
         this.keepAfterNavigationChange = false;
-     
         if (this.registerForm.invalid) {
             return;
         }
-
         this.loading = true;
         this.userService.signup(this.registerForm.value)
             .pipe(first())
             .subscribe(
                 data => {
                     this.alertService.success('Registration successful', false);
-                    
                     this.router.navigate(['/login']);
                 },
                 error => {
@@ -64,6 +54,7 @@ export class SignupComponent implements OnInit {
                     this.loading = false;
                 });
     }
+
 }
 
 

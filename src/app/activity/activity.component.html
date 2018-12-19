@@ -1,34 +1,29 @@
-
-
 <div class="container">
-        <button class="navButton" mat-raised-button="accent"   (click)="openDialog()" style="float: right"> Add Activity</button>
-        <h1>Activity Schedule</h1>
-<table class="table" size="sm">
-        
-<thead>
-<tr>
+  <button class="navButton" mat-fab="accent" (click)="openDialog()" style="float: right; font-size: 2em;">+</button>
+  <br>
+  <h1>Activity Schedule</h1>
+  <table class="table" size="sm">
+    <thead>
+      <tr>
         <th>Who</th>
         <th>What</th>
         <th>When</th>
         <th>Start Time</th>
         <th>End time</th>
+        <th>Meeting Location</th>
         <th>Details:</th>
-        
-        
         <th></th>
-  
-  
       </tr>
     </thead>
-      <tbody *ngFor="let activity of activities">
-        <td>{{activity.title}}</td>
-        <td>{{activity.title}}</td>
-        <td>{{activity.date}}</td>
-        <td>{{activity.startTime}}</td>
-        <td>{{activity.endTime}}</td>
-        <td>{{activity.location}}</td>
-        <td>{{activity.description}}</td>
-        <td> <button (click)="deleteActivity(activity.id)" style="float: right; width: 2em; text-align: center; ">x</button></td>
-      </tbody>
-    </table>
+    <tbody *ngFor="let activity of activities">
+      <td>{{activity.title}}</td>
+      <td>{{activity.date}}</td>
+      <td>{{activity.startTime}}</td>
+      <td>{{activity.endTime}}</td>
+      <td>{{activity.location}}</td>
+      <td>{{activity.description}}</td>
+      <td><button mat-button (click)="openActivityUpdate(activity.id)" style="float: right; width: 2em; text-align: center; ">update</button></td>
+      <td><button mat-button (click)="deleteActivity(activity.id)" style="float: right; width: 1em; text-align: center; color: maroon; font-weight: bolder">X</button></td>
+    </tbody>
+  </table>
 </div>

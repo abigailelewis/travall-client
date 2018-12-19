@@ -32,7 +32,7 @@ export class NavComponent implements OnInit {
 
   getTravalls() {
     this.travalls = [];
-    if (this.currentUser != '') {
+    if (this.currentUser !== '') {
       this.travallService.getTravalls(this.currentUser.user)
         .subscribe((data: any) => {
           return this.travalls = data;

@@ -14,6 +14,7 @@ import { CrewService } from '../services/crew.service';
 export class AddMemberComponent implements OnInit {
   addMemberForm: FormGroup;
   currentTravall: any = JSON.parse(sessionStorage.getItem('currentTravall')) || '';
+  loading: any;
 
   constructor(private formBuilder: FormBuilder, private router: Router, private matDialogRef: MatDialogRef<AddMemberComponent>, public dialog: MatDialog, private crewService: CrewService) { }
 

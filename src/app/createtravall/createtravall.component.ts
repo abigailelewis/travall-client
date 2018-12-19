@@ -12,6 +12,7 @@ import { TravallService } from '../services/travall.service';
 export class CreatetravallComponent implements OnInit {
   createTravallForm: FormGroup;
   currentUser: any = JSON.parse(sessionStorage.getItem('currentUser')) || '';
+  loading: any;
 
   constructor(private formBuilder: FormBuilder, private matDialogRef: MatDialogRef<CreatetravallComponent>, public dialog: MatDialog, private travallService: TravallService, ) { }
 
