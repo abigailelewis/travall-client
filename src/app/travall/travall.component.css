@@ -2,7 +2,11 @@ agm {
   height: 2em;
 }
 
+button {
+  outline: none;
+}
 
 .createButton {
   text-align: center;
+  font-size: 2em;
 }
