@@ -14,3 +14,6 @@
     color: grey;
     width: 60em;
 }
+button {
+  outline: none;
+}
