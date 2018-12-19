@@ -9,7 +9,7 @@
   <div class="dropdown">
     <button class="navButton" mat-button="primary"> MyTravalls </button>
       <div class="dropdown-content">
-        <button id="addTravallButton" mat-button color="primary" (click)="openDialog()">Add a Travall</button>
+        <button id="addTravallButton" mat-button color="accent" (click)="openDialog()">Add a Travall</button>
         <ul id="dropdown-travalls">
           <li *ngFor="let travall of travalls">
             <a (click)="setCurrentTravall(travall)" routerLink="/travall">{{travall.title}}</a>
