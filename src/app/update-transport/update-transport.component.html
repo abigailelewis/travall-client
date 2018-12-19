@@ -7,8 +7,8 @@
       <input type="text" formControlName="participants" name="participants" [value]="transportDetails.participants">
     </div>
     <div class="form-group">
-      <label for="dOrA">What?
-        <br>Arrival to dest. or Departure from dest?
+      <label for="dOrA">
+        <br>Arrival to {{currentTravall.title}} or <br> Departure from {{currentTravall.title}}?
       </label>
       <select class="form-control" style="width:auto;" formControlName="dOrA" name="dOrA">
         <option value="Arrival">Arrival</option>
