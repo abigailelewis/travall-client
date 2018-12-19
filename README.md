@@ -48,7 +48,7 @@ A step by step process to get started
 Clone repo
 
 ```
-git clone (link)
+git clone (https://github.com/abigailelewis/travall-client.git)
 ```
 
 Install `npm` packages
