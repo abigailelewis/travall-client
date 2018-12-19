@@ -25,23 +25,24 @@ export class UpdateTransportComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.transportService.getTransport(this.data)
-      .subscribe((transport: Transport) => {
-        this.transportDetails = transport;
-        return this.updateForm();
+    // this.transportService.getTransport(this.data)
+    //   .subscribe((transport: Transport) => {
+    //     this.transportDetails = transport;
+    //     return this.updateForm();
+    //   });
+      this.updateTransportForm = this.formBuilder.group({
+        "dOrA": new FormControl(),
+        "type": new FormControl(),
+        "date": new FormControl(),
+        "upTime": new FormControl(),
+        "downTime": new FormControl(),
+        "participants": new FormControl(),
       });
   }
 
-  updateForm() {
-    this.updateTransportForm = this.formBuilder.group({
-      "dOrA": this.transportDetails.dOrA,
-      "type": this.transportDetails.type,
-      "date": this.transportDetails.date,
-      "upTime": this.transportDetails.upTime,
-      "downTime": this.transportDetails.downTime,
-      "participants": this.transportDetails.participants,
-    });
-  }
+  // updateForm() {
+  
+  // }
 
   onSubmit() {
     this.transportService.updateTransport(this.updateTransportForm.value, this.data);

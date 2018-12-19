@@ -25,23 +25,24 @@ export class UpdateActivityComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.activityService.getActivity(this.data)
-      .subscribe((activity: Activity) => {
-        this.activityDetails = activity;
-        return this.updateForm();
+    // this.activityService.getActivity(this.data)
+    //   .subscribe((activity: Activity) => {
+    //     this.activityDetails = activity;
+    //     return this.updateForm();
+    //   });
+      this.updateActivityForm = this.formBuilder.group({
+        "title": new FormControl(),
+        "date": new FormControl(),
+        "startTime": new FormControl(),
+        "endTime": new FormControl(),
+        "location": new FormControl(),
+        "description": new FormControl(),
       });
   }
 
-  updateForm() {
-    this.updateActivityForm = this.formBuilder.group({
-      "title": new FormControl(),
-      "date": new FormControl(),
-      "startTime": new FormControl(),
-      "endTime": new FormControl(),
-      "location": new FormControl(),
-      "description": new FormControl(),
-    })
-  }
+  // updateForm() {
+    
+  // }
 
   onSubmit() {
     this.activityService.updateActivity(this.updateActivityForm.value, this.data);
