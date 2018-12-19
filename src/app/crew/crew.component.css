@@ -1,43 +1,40 @@
 .container {
-    margin-top: 5em;
-    padding: 2em;
-    border: 3px solid #e5e5e5;
-    border-radius: 0.4em;
-    box-shadow: 2px 4px 20px
-    grey;
-    text-align: center;
-    color: grey;
-    width: 60em;
+  margin-top: 5em;
+  padding: 2em;
+  border: 3px solid #e5e5e5;
+  border-radius: 0.4em;
+  box-shadow: 2px 4px 20px grey;
+  text-align: center;
+  color: grey;
+  width: 60em;
 }
 .card {
-    margin: .2em;
-   }
-
-.row {
-      margin-top: 20px;
-      margin-left: 250px;
-     
+  margin: auto;
 }
 
+button {
+  outline: none;
+}
 
-    #border-primary {
-      color: grey;
-    }
+.row {
+ text-align: center;
+}
 
-    .card-header{
-      text-align: center;
-      margin-top: 0;
-      border-radius: 0;
-      color: grey;
+#border-primary {
+  color: grey;
+}
 
-    }
+.card-header {
+  text-align: center;
+  margin-top: 0;
+  border-radius: 0;
+  color: grey;
+}
 
-  h1 {
-   color:grey;
-  }
+h3 {
+  color: grey;
+}
 
-  p{
-    color: grey;
-
-  }
-
+p {
+  color: grey;
+}

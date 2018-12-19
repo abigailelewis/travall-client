@@ -15,3 +15,6 @@
     width: 60em;
     margin-bottom: 5em;
 }
+button {
+  outline: none;
+}
